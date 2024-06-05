@@ -1,30 +1,54 @@
-import { Box, Typography } from "@mui/material"
+import { Box, Button, Typography } from "@mui/material"
 
-const BACKGROUND_IMAGE = "images/pexels-binyaminmellish-1396422.jpg"
+const backgroundImage = "images/pexels-binyaminmellish-1396122.jpg"
 
 export default function WelcomeHero() {
 	return (
 		<div>
-			{/* welcome hero banner */}
 			<Box
 				sx={{
 					width: "100%",
 					height: "500px",
-					backgroundImage: `url(${BACKGROUND_IMAGE})`,
+					backgroundImage: `url(${backgroundImage})`,
 					backgroundSize: "cover",
-					color: "white",
+					backgroundPosition: "start start",
+					color: "black",
 					display: "flex",
 					alignItems: "center",
-					justifyContent: "center",
-					"& > *": {
-						// Apply text shadow for better visibility
-						textShadow: "0px 0px 3px #000",
-					},
+					justifyContent: "start",
+					// "& > *": {
+					// 	// Apply text shadow for better visibility
+					// 	textShadow: "0px 0px 3px #000",
+					// },
 				}}>
-				<div>
-					<Typography variant="h3">
-						Your Dream Home is Closer than You Think!
-					</Typography>
+				<div
+					style={{
+						width: "100%",
+						height: "100%",
+						background: `linear-gradient(to right, white, transparent)`,
+					}}>
+					<div
+						style={{
+							width: "50%",
+							height: "100%",
+							display: "flex",
+							flexDirection: "column",
+							justifyContent: "center",
+							alignItems: "center",
+						}}>
+						<img
+							src="logos/jaskiel-logo-outlined.png"
+							alt="logo"
+							height="150px"
+						/>
+						<Typography variant="h3">
+							Your Dream Home is Closer than You Think!
+						</Typography>
+						<Typography variant="h5">
+							Find the perfect home for you and your family.
+						</Typography>
+						<Button variant="contained">Contact Us</Button>
+					</div>
 				</div>
 			</Box>
 		</div>
