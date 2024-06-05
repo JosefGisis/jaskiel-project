@@ -1,5 +1,14 @@
+import Link from "next/link"
+
 export default function Header() {
-  return (
-    <div>Header</div>
-  )
+	return (
+		<div style={{ display: "flex", justifyContent: "center", marginBlock: 15 }}>
+			<Link href="/">
+				<img
+					src="/logos/Jaskiel-logo-outlined.png"
+					style={{ height: 100 }}
+				/>
+			</Link>
+		</div>
+	)
 }
