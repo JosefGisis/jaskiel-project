@@ -80,7 +80,7 @@ export default function SurveyForm() {
 			{completed ? (
 				<CompletedMessage setCompleted={setCompleted} />
 			) : (
-				<div>
+				<div id="contact-us">
 					<Typography variant="h3" textAlign="center">
 						Contact Us
 					</Typography>

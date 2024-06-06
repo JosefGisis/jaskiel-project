@@ -1,6 +1,6 @@
 export const welcome = {
 	title: "Your Dream Home is Closer than You Think!",
-	subtitle: "Find the perfect home for you and your family.",
+	subtitle: "The Jaskiel Team has been helping families achieve their real estate dreams for over 20 years. Let us help you find your perfect home today!",
 }
 
 interface AboutType {
