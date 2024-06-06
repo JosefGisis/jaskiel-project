@@ -81,7 +81,11 @@ export default function AboutSection() {
 										md: index % 2 === 0 ? 3 : 1,
 									},
 								}}>
-								<img src={item.image} height="350" />
+								<img
+									src={item.image}
+									width="460"
+									height="307"
+								/>
 							</Box>
 						</Container>
 					</Box>
