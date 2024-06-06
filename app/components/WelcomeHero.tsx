@@ -13,7 +13,7 @@ export default function WelcomeHero() {
 			<Box
 				sx={{
 					width: "100%",
-					height: { xs: "700px", sm: "800px" },
+					height: { xs: "800px", sm: "900px" },
 					backgroundImage: `url(${backgroundImage})`,
 					backgroundSize: "cover",
 					backgroundPosition: "center center",
@@ -65,11 +65,11 @@ export default function WelcomeHero() {
 									height="175px"
 								/>
 
-								<Typography variant="h2">
+								<Typography variant="h3">
 									{welcome.title}
 								</Typography>
 
-								<Typography variant="h5">
+								<Typography variant="h6">
 									{welcome.subtitle}
 								</Typography>
 
