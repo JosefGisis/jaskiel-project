@@ -1,6 +1,7 @@
 import { Container, Typography } from "@mui/material"
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2"
 import AgentCard from "./AgentCard"
+import { agents } from "../content"
 
 export default function AgentsSection() {
 	return (
@@ -39,33 +40,3 @@ export default function AgentsSection() {
 		</Container>
 	)
 }
-
-const agents = [
-	{
-		name: "John Doe",
-		title: "Real Estate Agent",
-		phone: "123-456-7890",
-		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
-		image: "",
-		email: "",
-		social: "",
-	},
-	{
-		name: "Jane Doe",
-		title: "Real Estate Agent",
-		phone: "123-456-7890",
-		text: "Jane is a real estate agent with 10 years of experience. She has helped many families find their dream homes.",
-		image: "",
-		email: "",
-		social: "",
-	},
-	{
-		name: "John Smith",
-		title: "Real Estate Agent",
-		phone: "123-456-7890",
-		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
-		image: "",
-		email: "",
-		social: "",
-	},
-]

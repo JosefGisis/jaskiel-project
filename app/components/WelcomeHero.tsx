@@ -1,4 +1,5 @@
 import { Box, Button, Typography } from "@mui/material"
+import { welcome } from "../content"
 
 const backgroundImage = "images/pexels-binyaminmellish-1396122.jpg"
 
@@ -42,10 +43,10 @@ export default function WelcomeHero() {
 							height="150px"
 						/>
 						<Typography variant="h3">
-							Your Dream Home is Closer than You Think!
+							{welcome.title}
 						</Typography>
 						<Typography variant="h5">
-							Find the perfect home for you and your family.
+							{welcome.subtitle}
 						</Typography>
 						<Button variant="contained">Contact Us</Button>
 					</div>

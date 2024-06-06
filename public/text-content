@@ -1,0 +1,35 @@
+Website content
+Add to content or modify structure.
+
+Home Banner:
+  - Title: "Your Dream Home is Closer than You think!"
+  - subtitle: "Clients love working with the Jaskiel team, yadda yadda."
+
+About Section:
+  - List of about cards:
+    - Title: “What we do.”
+    - Text: “We do house stuff. Nuff said.”
+
+Agents Section:
+  - Title: Our Agents.
+  - List of agents:
+    - Image:
+    - Name: "Jane Doe"
+    - Description:  "Jane Doe has a lot of experience living in houses therefore, she must be good at selling them."
+    - Contact Links:
+
+Testimonials:
+  - Title: “What are clients saying.”
+  - List of testimonials:
+    - Name: “John Doe”
+    - Text: "I got my house and it seems alright. A bit drafty though. Would not use them again because I just bought a house."
+
+Contact us form:
+  - Title: Contact Us
+  - Subtitle: “Reach out to us with any questions comments or concerns.”
+  - Email field:
+  - Name field:
+  - Request field: “Enter any questions, requests, or comments.”
+	
+Footer Links:
+  - Relevant business and contact links go here: 
