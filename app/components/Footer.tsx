@@ -4,24 +4,26 @@ import EmailIcon from "@mui/icons-material/Email"
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone"
 import { colorTheme } from "../../styles/colorTheme"
 import Link from "next/link"
-import { agents } from "../content"
+// import { agents } from "../content"
 
 export default function Footer() {
 	const { primary } = colorTheme
 	return (
 		<div
+			id="footer"
 			style={{
 				backgroundColor: primary,
 				color: "white",
 			}}>
 			<Container maxWidth="lg">
+				{/* responsive flex is not currently used */}
 				<Box
 					sx={{
 						display: "flex",
 						gap: "40px",
 						flexDirection: { xs: "column", md: "row" },
 						justifyContent: "space-between",
-						mt: "30px",
+						mt: "60px",
 					}}>
 					<div
 						id="business-links"
@@ -57,7 +59,7 @@ export default function Footer() {
 						<Typography
 							fontSize="0.8rem"
 							variant="body2"
-							marginBottom="1rem">
+							marginBottom="1.5rem">
 							The Jaskiel Team is a subdivision of Keller Williams
 							Realty
 						</Typography>
@@ -93,8 +95,9 @@ export default function Footer() {
 						</div>
 					</div>
 
-					{/* links section */}
-					{agents.map((item, index) => (
+					{/* not currently used */}
+					{/* agents link section */}
+					{/* {agents.map((item, index) => (
 						<Box
 							key={index}
 							sx={{
@@ -117,7 +120,7 @@ export default function Footer() {
 							</div>
 
 							{item.links.map((link, index) => (
-								<Link key={index} href={link.url}>
+								<a key={index} href={link.href}>
 									<Typography
 										style={{ textWrap: "nowrap" }}
 										variant="body2"
@@ -125,10 +128,11 @@ export default function Footer() {
 										width="fit-content">
 										{link.label}
 									</Typography>
-								</Link>
+								</a>
 							))}
 						</Box>
 					))}
+					*/}
 				</Box>
 
 				<Typography

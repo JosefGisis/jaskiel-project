@@ -36,9 +36,10 @@ export default function AgentsSection() {
 						<Grid2 key={index} xs={12} sm={6} md={4}>
 							<AgentCard
 								text={item.text}
-								image={item.image}
+								url={item.imageURL}
 								name={item.name}
-								href={item.href}
+								phone={item.phone}
+								email={item.email}
 							/>
 						</Grid2>
 					))}

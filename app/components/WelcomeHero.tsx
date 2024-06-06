@@ -37,17 +37,9 @@ export default function WelcomeHero() {
 							justifyContent: "center",
 							alignItems: "center",
 						}}>
-						<img
-							src="logos/jaskiel-logo.png"
-							alt="logo"
-							height="150px"
-						/>
-						<Typography variant="h3">
-							{welcome.title}
-						</Typography>
-						<Typography variant="h5">
-							{welcome.subtitle}
-						</Typography>
+						<img src="logos/jaskiel-logo.png" height="150px" />
+						<Typography variant="h3">{welcome.title}</Typography>
+						<Typography variant="h5">{welcome.subtitle}</Typography>
 						<Button variant="contained">Contact Us</Button>
 					</div>
 				</div>

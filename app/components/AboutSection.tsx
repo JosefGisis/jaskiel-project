@@ -12,6 +12,7 @@ export default function AboutSection() {
 					flexDirection: "column",
 					alignItems: "center",
 				}}>
+				{/* card background color is determined by index */}
 				{about.map((item, index) => (
 					<Box
 						key={index}
@@ -26,6 +27,7 @@ export default function AboutSection() {
 							color: (index + 1) % 3 === 0 ? "white" : "black",
 							paddingBlock: "70px",
 						}}>
+						{/* depending on screen width the image and text is displayed in different orders */}
 						<Container
 							maxWidth="lg"
 							sx={{

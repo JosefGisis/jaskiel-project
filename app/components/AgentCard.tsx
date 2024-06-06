@@ -1,76 +1,53 @@
-import {
-	Card,
-	CardHeader,
-	CardMedia,
-	CardContent,
-	Typography,
-	Avatar,
-	Button,
-	CardActionArea,
-} from "@mui/material"
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt"
+import { Card, CardMedia, CardContent, Typography, Link } from "@mui/material"
 import { colorTheme } from "../../styles/colorTheme"
+import EmailIcon from "@mui/icons-material/Email"
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone"
 
 export default function AgentCard({
 	text,
-	image,
+	url,
 	name,
-	href,
+	phone,
+	email,
 }: {
 	text: string
-	image: string
+	url: string
 	name: string
-	href: string
+	phone: { label: string; href: string }
+	email: { label: string; href: string }
 }) {
-	const { secondary } = colorTheme
+	const { accent } = colorTheme
 	return (
 		<Card variant="outlined">
-			<CardActionArea>
-				{/* <CardHeader
-				title={
-					<Typography textAlign="center" variant="h4">
-          {name}
-					</Typography>
-          }
-          // avatar={
-            // 	<Avatar
-            // 		variant="square"
-            // 		style={{ height: 100, width: 100 }}
-            // 		src={image}
-            // 		alt={name}>
-            // 		J
-            // 	</Avatar>
-            // }
-            /> */}
-				<CardMedia
-					height="350px"
-					component="img"
-					image={image}
-					alt={name}
-				/>
-				<CardContent
-					sx={{
-						display: "flex",
-						flexDirection: "column",
-						justifyContent: "center",
-						gap: "0.5rem",
-					}}>
-					<Typography textAlign="center" variant="h4">
-						{name}
-					</Typography>
-					<Typography variant="body1">{text}</Typography>
-					<div style={{ display: "flex", justifyContent: "end" }}>
-						<Button
-							href={href}
-							sx={{
-								color: "black",
-							}}
-							variant="text">
-							<ArrowRightAltIcon />
-						</Button>
-					</div>
-				</CardContent>
-			</CardActionArea>
+			<CardMedia height="350px" component="img" image={url} alt={name} />
+			<CardContent
+				sx={{
+					display: "flex",
+					flexDirection: "column",
+					justifyContent: "center",
+					gap: "0.5rem",
+				}}>
+				<Typography fontStyle="oblique" textAlign="center" variant="h4">
+					{name}
+				</Typography>
+
+				<Typography variant="body1">{text}</Typography>
+
+				{/* contact links */}
+				<div style={{ display: "flex", gap: 18 }}>
+					<LocalPhoneIcon style={{ color: accent }} />
+					<Link href={phone.href} color="#000000">
+						{phone.label}
+					</Link>
+				</div>
+
+				<div style={{ display: "flex", gap: 18 }}>
+					<EmailIcon style={{ color: accent }} />
+					<Link href={email.href} color="#000000">
+						{email.label}
+					</Link>
+				</div>
+			</CardContent>
 		</Card>
 	)
 }

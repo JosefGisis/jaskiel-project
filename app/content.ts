@@ -28,96 +28,142 @@ export const about: AboutType[] = [
 
 interface AgentInfoType {
 	name: string
-	phone: string
+	phone: { label: string; href: string }
 	text: string
-	href: string
-	image: string
-	email: string
-	links: { label: string; url: string }[]
+	imageURL: string
+	email: { label: string; href: string }
+	links: { label: string; href: string }[]
 }
 export const agents: AgentInfoType[] = [
 	{
 		name: "Josef Gisis",
 		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
-		image: "/images/Tesser_2-21-673.jpg",
-		phone: "7326428750",
-		email: "jsquared.gisis@gmail.com",
+		imageURL: "/images/Tesser_2-21-673.jpg",
+		phone: { label: "732-642-8750", href: "tel:7326428750" },
+		email: {
+			label: "jsquared.gisis@gmail.com",
+			href: "mailto:jsquared.gisis@gmail.com",
+		},
 		links: [
 			{
 				label: "Website",
-				url: "https://www.josefgisis.com",
+				href: "https://www.josefgisis.com",
 			},
 		],
-		href: "/contact-links",
 	},
 	{
 		name: "Josef Gisis",
 		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
-		image: "/images/Tesser_2-21-673.jpg",
-		phone: "7326428750",
-		email: "jsquared.gisis@gmail.com",
+		imageURL: "/images/Tesser_2-21-673.jpg",
+		phone: { label: "732-642-8750", href: "tel:7326428750" },
+		email: {
+			label: "jsquared.gisis@gmail.com",
+			href: "mailto:jsquared.gisis@gmail.com",
+		},
 		links: [
 			{
-				label: "Zillow",
-				url: "https://www.josefgisis.com",
+				label: "Website",
+				href: "https://www.josefgisis.com",
 			},
 		],
-		href: "/contact-links",
 	},
 	{
 		name: "Josef Gisis",
 		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
-		image: "/images/Tesser_2-21-673.jpg",
-		phone: "7326428750",
-		email: "jsquared.gisis@gmail.com",
+		imageURL: "/images/Tesser_2-21-673.jpg",
+		phone: { label: "732-642-8750", href: "tel:7326428750" },
+		email: {
+			label: "jsquared.gisis@gmail.com",
+			href: "mailto:jsquared.gisis@gmail.com",
+		},
 		links: [
 			{
 				label: "Website",
-				url: "https://www.josefgisis.com",
+				href: "https://www.josefgisis.com",
 			},
 		],
-		href: "/contact-links",
 	},
 	{
 		name: "Josef Gisis",
 		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
-		image: "/images/Tesser_2-21-673.jpg",
-		phone: "7326428750",
-		email: "jsquared.gisis@gmail.com",
+		imageURL: "/images/Tesser_2-21-673.jpg",
+		phone: { label: "732-642-8750", href: "tel:7326428750" },
+		email: {
+			label: "jsquared.gisis@gmail.com",
+			href: "mailto:jsquared.gisis@gmail.com",
+		},
 		links: [
 			{
 				label: "Website",
-				url: "https://www.josefgisis.com",
+				href: "https://www.josefgisis.com",
 			},
 		],
-		href: "/contact-links",
 	},
 	{
 		name: "Josef Gisis",
 		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
-		image: "/images/Tesser_2-21-673.jpg",
-		phone: "7326428750",
-		email: "jsquared.gisis@gmail.com",
+		imageURL: "/images/Tesser_2-21-673.jpg",
+		phone: { label: "732-642-8750", href: "tel:7326428750" },
+		email: {
+			label: "jsquared.gisis@gmail.com",
+			href: "mailto:jsquared.gisis@gmail.com",
+		},
 		links: [
 			{
 				label: "Website",
-				url: "https://www.josefgisis.com",
+				href: "https://www.josefgisis.com",
 			},
 		],
-		href: "/contact-links",
 	},
 	{
 		name: "Josef Gisis",
 		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
-		image: "/images/Tesser_2-21-673.jpg",
-		phone: "7326428750",
-		email: "jsquared.gisis@gmail.com",
+		imageURL: "/images/Tesser_2-21-673.jpg",
+		phone: { label: "732-642-8750", href: "tel:7326428750" },
+		email: {
+			label: "jsquared.gisis@gmail.com",
+			href: "mailto:jsquared.gisis@gmail.com",
+		},
 		links: [
 			{
 				label: "Website",
-				url: "https://www.josefgisis.com",
+				href: "https://www.josefgisis.com",
 			},
 		],
-		href: "/contact-links",
+	},
+]
+
+export const testimonials: { text: string; name: string }[] = [
+	{
+		text: "The JaskialTeam made the process of selling our home a breeze. They were professional, knowledgeable, and always had our best interests at heart. We couldn't be happier with the results!",
+		name: "John and Jane Doe",
+	},
+	{
+		text: "Working with the JaskialTeam was an absolute pleasure. They took the time to understand our needs and preferences, ensuring that we found the perfect home for our family. We highly recommend their services!",
+		name: "The Smith Family",
+	},
+	{
+		text: "The JaskialTeam exceeded our expectations in every way. Their attention to detail, market expertise, and exceptional service made the home-buying process stress-free and enjoyable. We're so grateful for their help!",
+		name: "The Johnsons",
+	},
+	{
+		text: "We can't thank the JaskialTeam enough for helping us find our dream home. Their dedication, professionalism, and personalized approach made all the difference. We highly recommend their services to anyone looking to buy or sell a home!",
+		name: "The Garcias",
+	},
+	{
+		text: "The JaskialTeam made the process of selling our home a breeze. They were professional, knowledgeable, and always had our best interests at heart. We couldn't be happier with the results!",
+		name: "John and Jane Doe",
+	},
+	{
+		text: "Working with the JaskialTeam was an absolute pleasure. They took the time to understand our needs and preferences, ensuring that we found the perfect home for our family. We highly recommend their services!",
+		name: "The Smith Family",
+	},
+	{
+		text: "The JaskialTeam exceeded our expectations in every way. Their attention to detail, market expertise, and exceptional service made the home-buying process stress-free and enjoyable. We're so grateful for their help!",
+		name: "The Johnsons",
+	},
+	{
+		text: "We can't thank the JaskialTeam enough for helping us find our dream home. Their dedication, professionalism, and personalized approach made all the difference. We highly recommend their services to anyone looking to buy or sell a home!",
+		name: "The Garcias",
 	},
 ]
