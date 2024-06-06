@@ -58,7 +58,7 @@ export const agents: AgentInfoType[] = [
 		email: "jsquared.gisis@gmail.com",
 		links: [
 			{
-				label: "Website",
+				label: "Zillow",
 				url: "https://www.josefgisis.com",
 			},
 		],

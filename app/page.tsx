@@ -4,6 +4,7 @@ import WelcomeHero from "./components/WelcomeHero"
 import AboutSection from "./components/AboutSection"
 import AgentsSection from "./components/AgentsSection"
 import Testimonials from "./components/Testimonials"
+import Footer from "./components/Footer"
 
 export default function Page() {
 	return (

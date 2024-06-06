@@ -38,7 +38,7 @@ export default function WelcomeHero() {
 							alignItems: "center",
 						}}>
 						<img
-							src="logos/jaskiel-logo-outlined.png"
+							src="logos/jaskiel-logo.png"
 							alt="logo"
 							height="150px"
 						/>
