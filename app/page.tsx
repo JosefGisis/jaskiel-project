@@ -17,10 +17,7 @@ export default function Page() {
 				<WelcomeHero />
 				<AboutSection />
 				<AgentsSection />
-				<Testimonials />
-				<Container maxWidth="sm">
-					<SurveyForm />
-				</Container>
+				<SurveyForm />
 			</Stack>
 		</div>
 	)

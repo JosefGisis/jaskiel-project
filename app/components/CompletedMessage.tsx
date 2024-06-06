@@ -7,15 +7,13 @@ export default function ({
 }: {
 	setCompleted: (completed: boolean) => void
 }) {
-	const { redAccentContrast, grayAccent, redAccent } = colorTheme
+	const { primary } = colorTheme
 	return (
 		<div>
 			<Box
 				sx={{
 					marginBottom: "1.5rem",
 					padding: "0.5rem",
-					background: `linear-gradient(to bottom right, ${redAccentContrast}, ${grayAccent})`,
-					color: redAccent,
 				}}>
 				<Typography textAlign="center" variant="h4">
 					Thank you for reaching out to us!
@@ -25,7 +23,7 @@ export default function ({
 				marginBottom="1.5rem"
 				textAlign="center"
 				variant="subtitle1">
-				We have received your request and will get back to you as soon
+				We have received your message and will get back to you as soon
 				as possible.
 			</Typography>
 			<div
@@ -35,8 +33,11 @@ export default function ({
 					display: "flex",
 					justifyContent: "center",
 				}}>
-				<Button onClick={() => setCompleted(false)} variant="outlined">
-					Submit a new request
+				<Button
+					onClick={() => setCompleted(false)}
+					variant="outlined"
+					style={{ color: primary }}>
+					Send another message
 				</Button>
 			</div>
 		</div>

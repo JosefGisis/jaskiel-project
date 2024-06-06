@@ -28,23 +28,96 @@ export const about: AboutType[] = [
 
 interface AgentInfoType {
 	name: string
-	title: string
 	phone: string
-	text: string[]
+	text: string
+	href: string
 	image: string
 	email: string
-	social: string
+	links: { label: string; url: string }[]
 }
 export const agents: AgentInfoType[] = [
 	{
-		name: "John Doe",
-		title: "Real Estate Agent",
-		phone: "123-456-7890",
-		text: [
-			"John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
+		name: "Josef Gisis",
+		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
+		image: "/images/Tesser_2-21-673.jpg",
+		phone: "7326428750",
+		email: "jsquared.gisis@gmail.com",
+		links: [
+			{
+				label: "Website",
+				url: "https://www.josefgisis.com",
+			},
 		],
-		image: "",
-		email: "",
-		social: "",
+		href: "/contact-links",
+	},
+	{
+		name: "Josef Gisis",
+		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
+		image: "/images/Tesser_2-21-673.jpg",
+		phone: "7326428750",
+		email: "jsquared.gisis@gmail.com",
+		links: [
+			{
+				label: "Website",
+				url: "https://www.josefgisis.com",
+			},
+		],
+		href: "/contact-links",
+	},
+	{
+		name: "Josef Gisis",
+		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
+		image: "/images/Tesser_2-21-673.jpg",
+		phone: "7326428750",
+		email: "jsquared.gisis@gmail.com",
+		links: [
+			{
+				label: "Website",
+				url: "https://www.josefgisis.com",
+			},
+		],
+		href: "/contact-links",
+	},
+	{
+		name: "Josef Gisis",
+		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
+		image: "/images/Tesser_2-21-673.jpg",
+		phone: "7326428750",
+		email: "jsquared.gisis@gmail.com",
+		links: [
+			{
+				label: "Website",
+				url: "https://www.josefgisis.com",
+			},
+		],
+		href: "/contact-links",
+	},
+	{
+		name: "Josef Gisis",
+		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
+		image: "/images/Tesser_2-21-673.jpg",
+		phone: "7326428750",
+		email: "jsquared.gisis@gmail.com",
+		links: [
+			{
+				label: "Website",
+				url: "https://www.josefgisis.com",
+			},
+		],
+		href: "/contact-links",
+	},
+	{
+		name: "Josef Gisis",
+		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
+		image: "/images/Tesser_2-21-673.jpg",
+		phone: "7326428750",
+		email: "jsquared.gisis@gmail.com",
+		links: [
+			{
+				label: "Website",
+				url: "https://www.josefgisis.com",
+			},
+		],
+		href: "/contact-links",
 	},
 ]
