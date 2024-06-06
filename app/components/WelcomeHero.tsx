@@ -61,7 +61,7 @@ export default function WelcomeHero() {
 									gap: "1.5rem",
 								}}>
 								<img
-									src="logos/jaskiel-logo.png"
+									src="logos/Jaskiel-logo.png"
 									height="175px"
 								/>
 

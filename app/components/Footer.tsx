@@ -38,7 +38,7 @@ export default function Footer() {
 							<div style={{ display: "flex", gap: "8px" }}>
 								<div>
 									<img
-										src="logos/jaskiel-logo-inverted.png"
+										src="logos/Jaskiel-logo-inverted.png"
 										height="100px"
 									/>
 								</div>
