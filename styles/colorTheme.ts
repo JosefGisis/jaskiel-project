@@ -1,16 +1,7 @@
 export const colorTheme = {
-    redAccent: "rgba(225, 30, 70, 1)",
-    redAccentContrast: "rgba(255, 255, 255, 1)",
-    lighterRedAccent: "rgba(225, 30, 70, 0.8)",
-    lighterRedAccentContrast: "rgba(255, 255, 255, 1)",
-    grayAccent: "rgba(210, 210, 210, 1)",
-    grayAccentContrast: "rgba(255, 255, 255, 1)",
-    grayBackground: "rgba(190, 190, 190, 0.3)",
-    grayBackgroundContrast: "rgba(0, 0, 0, 1)",
-    redBackground: "rgba(225, 30, 70, 0.4)",
-    redBackgroundContrast: "rgba(0, 0, 0, 1)",
-    shadowColor: "rgba(160, 160, 160, 1)",
-    shadowColorContrast: "rgba(255, 255, 255, 1)",
-    lighterShadowColor: "rgb(200, 200, 200, 1)",
-    lighterShadowColorContrast: "rgba(0, 0, 0, 1)",
+	primary: "rgb(43, 67, 107)", // dark blue #2b436b
+	secondary: "rgb(210, 210 ,210)", // light grey #d2d2d2
+	accent: "rgb(231, 198, 95)", // gold #e7c65f
+	secondaryAccent: "rgb(107, 146, 209)", // blue #6b92d1
+    neutral: "rgb(230, 217, 211)", // light brown #e6d9d3
 }

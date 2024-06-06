@@ -30,7 +30,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<ThemeProvider theme={theme}>
-				<body style={{ display: "flex", flexDirection: "column" }}>
+				<body style={{ display: "flex", flexDirection: "column", margin: 0 }}>
 					<Header />
 
 					<main style={{ flex: 1, minHeight: "62vh" }}>

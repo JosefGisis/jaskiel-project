@@ -2,8 +2,10 @@ import { Container, Typography } from "@mui/material"
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2"
 import AgentCard from "./AgentCard"
 import { agents } from "../content"
+import { colorTheme } from "../../styles/colorTheme"
 
 export default function AgentsSection() {
+	const {accent, neutral, primary, secondary, secondaryAccent} = colorTheme
 	return (
 		<Container>
 			<section
@@ -13,6 +15,7 @@ export default function AgentsSection() {
 					flexDirection: "column",
 					alignItems: "center",
 					marginBottom: "4rem",
+					background: neutral,
 				}}>
 				<Typography
 					marginBottom="2.5rem"
