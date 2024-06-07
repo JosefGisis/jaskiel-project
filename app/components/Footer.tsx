@@ -39,7 +39,7 @@ export default function Footer() {
 							<div style={{ display: "flex", gap: "8px" }}>
 								<div>
 									<img
-										src="logos/Jaskiel-logo-inverted.png"
+										src="logos/Jaskiel-logo-inverted.svg"
 										height="100px"
 									/>
 								</div>
@@ -52,7 +52,7 @@ export default function Footer() {
 									}}
 								/>
 								<img
-									src="logos/KWLogo-white-transparent.png"
+									src="logos/KWLogo-white-transparent.svg"
 									height="100px"
 								/>
 							</div>

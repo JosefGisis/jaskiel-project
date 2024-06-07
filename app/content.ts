@@ -65,7 +65,7 @@ export const agents: AgentInfoType[] = [
 			John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.
 
 		`,
-		imageURL: "/images/Tesser_2-21-673.jpg",
+		imageURL: "images/pexels-pixabay-48195.jpg",
 		phone: { label: "848-223-2295", href: "tel:8482232295" },
 		email: {
 			label: "bjaskiel@gmail.com",
@@ -78,7 +78,7 @@ export const agents: AgentInfoType[] = [
 		text: `
 			John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.
 		`,
-		imageURL: "/images/Tesser_2-21-673.jpg",
+		imageURL: "images/pexels-pixabay-48195.jpg",
 		phone: { label: "845-274-7024", href: "tel:8452747024" },
 		email: {
 			label: "malkarivka27@gmail.com",
@@ -104,7 +104,7 @@ export const agents: AgentInfoType[] = [
 		text: `
 			John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.
 		`,
-		imageURL: "/images/Tesser_2-21-673.jpg",
+		imageURL: "images/pexels-pixabay-48195.jpg",
 		phone: { label: "732-773-2149", href: "tel:7327732149" },
 		email: {
 			label: "Jennifergisis8@gmail.com ",
