@@ -16,9 +16,9 @@ export default function AgentCard({
 	phone: { label: string; href: string }
 	email: { label: string; href: string }
 }) {
-	const { accent } = colorTheme
+	const { accent, primary } = colorTheme
 	return (
-		<Card variant="outlined">
+		<Card variant="outlined" sx={{ borderColor: primary }}>
 			<CardMedia
 				height="350px"
 				component="img"

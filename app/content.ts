@@ -6,7 +6,7 @@ export interface LinkType {
 export const welcome = {
 	title: "Your Dream Home is Closer than You Think!",
 	subtitle:
-		"The Jaskiel Team is your real estate agency for the Jackson, NJ and neighboring communities. Let us help you find your perfect home today!",
+		"The Jaskiel Team is your premiere real estate agency for Lakewood, Jackson, Howell, Toms River, and the neighboring communities.",
 }
 
 interface AboutType {
