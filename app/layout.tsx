@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 		"Keller Williams Realty",
 	],
 	robots: "index",
-	icons: ["favicons/jaskiel-favicon-128.svg"],
+	icons: ["favicons/Jaskiel-favicon-128.svg"],
 }
 
 export default function RootLayout({
