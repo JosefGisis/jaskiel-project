@@ -35,28 +35,30 @@ export default function Footer() {
 						}}>
 						{/* logo and home page links */}
 
-						<Link href="/">
-							<div style={{ display: "flex", gap: "8px" }}>
-								<div>
+						<div style={{ display: "flex", gap: "8px" }}>
+							<div>
+								<Link href="/">
 									<img
 										src="logos/Jaskiel-logo-inverted.svg"
 										height="100px"
 									/>
-								</div>
-								<div
-									style={{
-										width: "1px",
-										height: "100px",
-										backgroundColor: "white",
-										marginInline: "10px",
-									}}
-								/>
+								</Link>
+							</div>
+							<div
+								style={{
+									width: "1px",
+									height: "100px",
+									backgroundColor: "white",
+									marginInline: "10px",
+								}}
+							/>
+							<a href="https://www.kw.com/">
 								<img
 									src="logos/KWLogo-white-transparent.svg"
 									height="100px"
 								/>
-							</div>
-						</Link>
+							</a>
+						</div>
 						<Typography
 							fontSize="0.8rem"
 							variant="body2"
