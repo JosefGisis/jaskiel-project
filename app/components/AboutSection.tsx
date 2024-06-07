@@ -20,11 +20,11 @@ export default function AboutSection() {
 							width: "100%",
 							background:
 								(index + 1) % 2 === 0
-									? "white"
+									? primary
 									: (index + 1) % 3 === 0
-										? primary
-										: neutral,
-							color: (index + 1) % 3 === 0 ? "white" : "black",
+										? neutral
+										: "white",
+							color: (index + 1) % 2 === 0 ? "white" : "black",
 							paddingBlock: "70px",
 						}}>
 						{/* depending on screen width the image and text is displayed in different orders */}
@@ -51,6 +51,7 @@ export default function AboutSection() {
 									alignItems: "center",
 									justifyContent: "center",
 									order: 2,
+									minWidth: "400px",
 									maxWidth: { xs: "550px", md: "700px" },
 								}}>
 								<div

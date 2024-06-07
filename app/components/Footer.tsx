@@ -4,9 +4,10 @@ import EmailIcon from "@mui/icons-material/Email"
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone"
 import { colorTheme } from "../../styles/colorTheme"
 import Link from "next/link"
-// import { agents } from "../content"
+import { footerLinks } from "../content"
 
 export default function Footer() {
+	const { phone, email, address } = footerLinks
 	const { primary } = colorTheme
 	return (
 		<div
@@ -68,17 +69,15 @@ export default function Footer() {
 						<div style={{ display: "flex", gap: 10 }}>
 							<LocalPhoneIcon />
 							<Typography id="phone" className="footer-link">
-								<a href="tel:732-330-3038">(732)-330-3038</a>
+								<a href={phone.href}>{phone.label}</a>
 							</Typography>
 						</div>
 
 						<div style={{ display: "flex", gap: 10 }}>
 							<EmailIcon />
 							<Typography id="email" className="footer-link">
-								<a
-									className="footer-link"
-									href="mailto:iRepairr4u@gmail.com">
-									iRepairr4u@gmail.com
+								<a className="footer-link" href={email.href}>
+									{email.label}
 								</a>
 							</Typography>
 						</div>
@@ -86,13 +85,22 @@ export default function Footer() {
 						<div style={{ display: "flex", gap: 10 }}>
 							<PlaceIcon />
 							<Typography id="address" className="footer-item">
-								<a
-									className="footer-link"
-									href="https://www.google.com/maps/place/iRepair4U+LLC/@40.1038409,-74.2717807,17z/data=!3m1!4b1!4m6!3m5!1s0x89c179553fca4843:0x689de9999043f34b!8m2!3d40.1038368!4d-74.2692058!16s%2Fg%2F11vkkr95w1?entry=ttu">
-									750 Green Valley rd., Jackson, NJ 08527
+								<a className="footer-link" href={address.href}>
+									{address.label}
 								</a>
 							</Typography>
 						</div>
+
+						{/* footer links */}
+						{/* {footerLinks.map((link, index) => (
+							<Link key={index} href={link.href}>
+								<Typography
+									variant="body2"
+									className="footer-link">
+									{link.label}
+								</Typography>
+							</Link>
+						))} */}
 					</div>
 
 					{/* not currently used */}

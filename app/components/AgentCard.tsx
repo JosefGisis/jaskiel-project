@@ -19,7 +19,13 @@ export default function AgentCard({
 	const { accent } = colorTheme
 	return (
 		<Card variant="outlined">
-			<CardMedia height="350px" component="img" image={url} alt={name} />
+			<CardMedia
+				height="350px"
+				component="img"
+				image={url}
+				alt={name}
+				width="100%"
+			/>
 			<CardContent
 				sx={{
 					display: "flex",

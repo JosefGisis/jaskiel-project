@@ -1,6 +1,12 @@
+export interface LinkType {
+	label: string
+	href: string
+}
+
 export const welcome = {
 	title: "Your Dream Home is Closer than You Think!",
-	subtitle: "The Jaskiel Team has been helping families achieve their real estate dreams for over 20 years. Let us help you find your perfect home today!",
+	subtitle:
+		"The Jaskiel Team is your real estate agency for the Jackson, NJ and neighboring communities. Let us help you find your perfect home today!",
 }
 
 interface AboutType {
@@ -11,159 +17,157 @@ interface AboutType {
 export const about: AboutType[] = [
 	{
 		title: "Who We Are",
-		text: "The JaskialTeam stands at the forefront of the real estate industry, blending unmatched expertise with unwavering dedication to our clients' success. Our team comprises seasoned professionals who are not just agents but advisors, guiding buyers and sellers through every step of the process with precision and care. We pride ourselves on our deep understanding of the market, leveraging cutting-edge tools and strategies to navigate even the most complex transactions smoothly.",
-		image: "images/pexels-binyaminmellish-1396122.jpg",
+		text: `
+			We are The Jaskial Team, your premier real estate agency serving Jackson, New Jersey, and surrounding communities.
+			Founded by the award-winning real estate professional Baila Jackson, our team is dedicated to providing exceptional 
+			service and expertise in every aspect of the real estate process.
+			Our goal is to ensure that every transaction is smooth, stress-free, and rewarding for our clients.
+			Whether you're looking to buy your first home, sell your current residence, or invest in real estate, The Jaskial Team is here to guide 
+			you every step of the way.`,
+		image: "images/pexels-pavel-danilyuk-7937225.jpg",
 	},
 	{
-		title: "Client-Centric Approach",
-		text: "At the heart of the JaskialTeam lies a profound commitment to putting our clients first. We believe in fostering long-term relationships built on trust, transparency, and exceptional service. Whether you're looking to buy your dream home or sell your current one, our team works tirelessly to exceed expectations, ensuring a stress-free experience that reflects your unique needs and goals. We're not just in the business of selling properties; we're in the business of creating memories and building futures.",
-		image: "images/pexels-binyaminmellish-1396122.jpg",
+		title: "Commitment to Excellence",
+		text: `
+			At The Jaskial Team, we are proud to set the standard for excellence in real estate sales and client service. 
+			We prioritize responsiveness, ensuring that you receive timely and personalized attention.
+			We believe that ethical conduct is the cornerstone of trust and reliability in the real estate profession.
+			Our unwavering commitment to these ideals enables us to deliver exceptional experiences for our clients and contribute 
+			positively to the real estate industry as a whole.
+		`,
+		image: "images/pexels-karolina-grabowska-5398881.jpg",
 	},
 	{
-		title: "Innovative Solutions",
-		text: "In an ever-evolving real estate landscape, the JaskialTeam remains ahead of the curve, offering innovative solutions that set us apart. From utilizing advanced technology to stay ahead of market trends to implementing creative marketing strategies that maximize property exposure, we're constantly evolving to meet the demands of today's dynamic market. Our goal is not just to facilitate transactions but to revolutionize the way people buy and sell homes, making the journey as rewarding and seamless as possible.",
-		image: "images/pexels-binyaminmellish-1396122.jpg",
+		title: "Communication and Guidance",
+		text: `
+			Whether you're a first-time homebuyer, looking to sell your current property, or seeking investment opportunities, our agents are prepared 
+			to assist you at every turn.
+ 			Our agents are available to communicate with you at your convenience, whether it's during regular business hours or outside 
+			of them. We understand the importance of being accessible and responsive to our clients' needs, which is why we strive to 
+			maintain open lines of communication throughout your real estate journey.		
+		`,
+		image: "images/pexels-pixabay-261621.jpg",
 	},
 ]
 
 interface AgentInfoType {
 	name: string
-	phone: { label: string; href: string }
+	phone: LinkType
 	text: string
 	imageURL: string
-	email: { label: string; href: string }
-	links: { label: string; href: string }[]
+	email: LinkType
+	links: LinkType[]
 }
 export const agents: AgentInfoType[] = [
 	{
-		name: "Josef Gisis",
-		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
+		name: "Baila Jaskiel",
+		text: `
+			John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.
+
+		`,
 		imageURL: "/images/Tesser_2-21-673.jpg",
-		phone: { label: "732-642-8750", href: "tel:7326428750" },
+		phone: { label: "848-223-2295", href: "tel:8482232295" },
 		email: {
-			label: "jsquared.gisis@gmail.com",
-			href: "mailto:jsquared.gisis@gmail.com",
+			label: "bjaskiel@gmail.com",
+			href: "mailto:bjaskiel@gmail.com",
 		},
-		links: [
-			{
-				label: "Website",
-				href: "https://www.josefgisis.com",
-			},
-		],
+		links: [],
 	},
 	{
-		name: "Josef Gisis",
-		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
+		name: 'Malky Rivka "Malky" Zaks (Sternbuch)',
+		text: `
+			John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.
+		`,
 		imageURL: "/images/Tesser_2-21-673.jpg",
-		phone: { label: "732-642-8750", href: "tel:7326428750" },
+		phone: { label: "845-274-7024", href: "tel:8452747024" },
 		email: {
-			label: "jsquared.gisis@gmail.com",
-			href: "mailto:jsquared.gisis@gmail.com",
+			label: "malkarivka27@gmail.com",
+			href: "mailto:malkarivka27@gmail.com",
 		},
-		links: [
-			{
-				label: "Website",
-				href: "https://www.josefgisis.com",
-			},
-		],
+		links: [],
 	},
 	{
-		name: "Josef Gisis",
-		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
-		imageURL: "/images/Tesser_2-21-673.jpg",
-		phone: { label: "732-642-8750", href: "tel:7326428750" },
+		name: "Dina Inzelbuch (Cohen)",
+		text: `
+			John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.
+		`,
+		imageURL: "images/pexels-pixabay-48195.jpg",
+		phone: { label: "773-240-1335", href: "tel:7732401335" },
 		email: {
-			label: "jsquared.gisis@gmail.com",
-			href: "mailto:jsquared.gisis@gmail.com",
+			label: "dina.cohen@kw.com",
+			href: "dina.cohen@kw.com",
 		},
-		links: [
-			{
-				label: "Website",
-				href: "https://www.josefgisis.com",
-			},
-		],
+		links: [],
 	},
 	{
-		name: "Josef Gisis",
-		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
+		name: 'Jennifer "Esther" Gisis',
+		text: `
+			John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.
+		`,
 		imageURL: "/images/Tesser_2-21-673.jpg",
-		phone: { label: "732-642-8750", href: "tel:7326428750" },
+		phone: { label: "732-773-2149", href: "tel:7327732149" },
 		email: {
-			label: "jsquared.gisis@gmail.com",
-			href: "mailto:jsquared.gisis@gmail.com",
+			label: "Jennifergisis8@gmail.com ",
+			href: "mailto:Jennifergisis8@gmail.com ",
 		},
-		links: [
-			{
-				label: "Website",
-				href: "https://www.josefgisis.com",
-			},
-		],
-	},
-	{
-		name: "Josef Gisis",
-		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
-		imageURL: "/images/Tesser_2-21-673.jpg",
-		phone: { label: "732-642-8750", href: "tel:7326428750" },
-		email: {
-			label: "jsquared.gisis@gmail.com",
-			href: "mailto:jsquared.gisis@gmail.com",
-		},
-		links: [
-			{
-				label: "Website",
-				href: "https://www.josefgisis.com",
-			},
-		],
-	},
-	{
-		name: "Josef Gisis",
-		text: "John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.",
-		imageURL: "/images/Tesser_2-21-673.jpg",
-		phone: { label: "732-642-8750", href: "tel:7326428750" },
-		email: {
-			label: "jsquared.gisis@gmail.com",
-			href: "mailto:jsquared.gisis@gmail.com",
-		},
-		links: [
-			{
-				label: "Website",
-				href: "https://www.josefgisis.com",
-			},
-		],
+		links: [],
 	},
 ]
 
 export const testimonials: { text: string; name: string }[] = [
 	{
-		text: "The JaskialTeam made the process of selling our home a breeze. They were professional, knowledgeable, and always had our best interests at heart. We couldn't be happier with the results!",
-		name: "John and Jane Doe",
+		text: `
+			Baila really cares about her clients and goes way beyond the call of duty to help her
+			clients out. Baila is honest, kind and responsive. Multiple times she advised against
+			buying a home which in retrospect we agreed would have been a poor purchase. She
+			gave us hours of time on the phone despite her busy schedule. We always knew she
+			had our best interest in mind. Baila reached out to me months after closing to give me
+			advice on re-financing my home so that I could save more on my mortgage. That's just
+			one example of her dedication, honesty and focus on her clients.
+		`,
+		name: "Tzipora D.",
 	},
 	{
-		text: "Working with the JaskialTeam was an absolute pleasure. They took the time to understand our needs and preferences, ensuring that we found the perfect home for our family. We highly recommend their services!",
-		name: "The Smith Family",
+		text: `
+			Baila is a one of a kind realtor who really cares! She got to know all our 
+			likes and dislikes and worked tirelessly to find us our perfect home with endless 
+			patience and availability and never any pressure. Her extensive knowledge made looking 
+			and actually purchasing a pleasure!
+		`,
+		name: "Abraham A.",
 	},
 	{
-		text: "The JaskialTeam exceeded our expectations in every way. Their attention to detail, market expertise, and exceptional service made the home-buying process stress-free and enjoyable. We're so grateful for their help!",
-		name: "The Johnsons",
+		text: `
+			Ms. Jaskiel was attentive, responsive, and calm. She was a great negotiator and was 
+			there for us from showing to closing. She even followed up after we had moved in to check 
+			in how the house was and if there were any further issues. Highly recommended!
+		`,
+		name: "Jonathan M.",
 	},
 	{
-		text: "We can't thank the JaskialTeam enough for helping us find our dream home. Their dedication, professionalism, and personalized approach made all the difference. We highly recommend their services to anyone looking to buy or sell a home!",
-		name: "The Garcias",
-	},
-	{
-		text: "The JaskialTeam made the process of selling our home a breeze. They were professional, knowledgeable, and always had our best interests at heart. We couldn't be happier with the results!",
-		name: "John and Jane Doe",
-	},
-	{
-		text: "Working with the JaskialTeam was an absolute pleasure. They took the time to understand our needs and preferences, ensuring that we found the perfect home for our family. We highly recommend their services!",
-		name: "The Smith Family",
-	},
-	{
-		text: "The JaskialTeam exceeded our expectations in every way. Their attention to detail, market expertise, and exceptional service made the home-buying process stress-free and enjoyable. We're so grateful for their help!",
-		name: "The Johnsons",
-	},
-	{
-		text: "We can't thank the JaskialTeam enough for helping us find our dream home. Their dedication, professionalism, and personalized approach made all the difference. We highly recommend their services to anyone looking to buy or sell a home!",
-		name: "The Garcias",
+		text: `
+			Baila is an energetic real estate professional, who was attentive to our needs and a
+			pleasure to work with. She communicated daily and very knowledgeable, and has a
+			good relationship with other realtors. She often bent her schedule to make it work for
+			our schedule. I would highly recommend Baila for buying or selling a home!
+		`,
+		name: "Brocha H.",
 	},
 ]
+
+export const footerLinks: {
+	phone: LinkType
+	email: LinkType
+	address: LinkType
+	otherLinks: LinkType[]
+} = {
+	phone: { label: "848-223-2295", href: "tel:8482232295" },
+	email: { label: "bjaskiel@gmail.com", href: "mailto:bjaskiel@gmail.com" },
+	address: {
+		label: "353 N County Line Rd, Jackson Township, NJ 08527",
+		href: "https://www.google.com/maps/place/Keller+Williams+Monmouth%2FOcean+-+John+Meeker/@40.13925,-74.3017685,17z/data=!3m1!4b1!4m6!3m5!1s0x89c17f46cf372a79:0xffc481e5d2923c3c!8m2!3d40.13925!4d-74.3017685!16s%2Fg%2F11g1ppy0vt?entry=ttu",
+	},
+	otherLinks: [
+		{ label: "Zillow", href: "https://www.zillow.com/profile/bjaskiel" },
+	],
+}
