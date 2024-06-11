@@ -6,7 +6,7 @@ export interface LinkType {
 export const welcome = {
 	title: "Your Dream Home is Closer than You Think!",
 	subtitle:
-		"The Jaskiel Team is your premiere real estate agency for Lakewood, Jackson, Howell, Toms River, and the neighboring communities.",
+		"The Jaskiel Team is your premiere real estate agency for Lakewood, Jackson, Howell, Toms River, and neighboring communities.",
 }
 
 interface AboutType {
@@ -18,18 +18,18 @@ export const about: AboutType[] = [
 	{
 		title: "Who We Are",
 		text: `
-			We are The Jaskial Team, your premier real estate agency serving Jackson, New Jersey, and surrounding communities.
-			Founded by the award-winning real estate professional Baila Jackson, our team is dedicated to providing exceptional 
-			service and expertise in every aspect of the real estate process.
+			We are The Jaskiel Team, your premier real estate agency serving Lakewood, Jackson, Howell, Toms River and the surrounding communities.
+			Founded by the award-winning real estate professional Baila Jackson, our team is dedicated to providing exceptional service and expertise
+			in every aspect of the real estate process.
 			Our goal is to ensure that every transaction is smooth, stress-free, and rewarding for our clients.
-			Whether you're looking to buy your first home, sell your current residence, or invest in real estate, The Jaskial Team is here to guide 
+			Whether you're looking to buy your first home, sell your current residence, or invest in real estate, The Jaskiel Team is here to guide 
 			you every step of the way.`,
 		image: "images/pexels-pavel-danilyuk-7937225.jpg",
 	},
 	{
 		title: "Commitment to Excellence",
 		text: `
-			At The Jaskial Team, we are proud to set the standard for excellence in real estate sales and client service. 
+			At The Jaskiel Team, we are proud to set the standard for excellence in real estate sales and client service. 
 			We prioritize responsiveness, ensuring that you receive timely and personalized attention.
 			We believe that ethical conduct is the cornerstone of trust and reliability in the real estate profession.
 			Our unwavering commitment to these ideals enables us to deliver exceptional experiences for our clients and contribute 
@@ -61,11 +61,8 @@ interface AgentInfoType {
 export const agents: AgentInfoType[] = [
 	{
 		name: "Baila Jaskiel",
-		text: `
-			John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.
-
-		`,
-		imageURL: "images/pexels-pixabay-48195.jpg",
+		text: "",
+		imageURL: "images/avatar-3814049_1280.png",
 		phone: { label: "848-223-2295", href: "tel:8482232295" },
 		email: {
 			label: "bjaskiel@gmail.com",
@@ -75,10 +72,8 @@ export const agents: AgentInfoType[] = [
 	},
 	{
 		name: 'Malky Rivka "Malky" Zaks (Sternbuch)',
-		text: `
-			John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.
-		`,
-		imageURL: "images/pexels-pixabay-48195.jpg",
+		text: "",
+		imageURL: "images/avatar-3814049_1280.png",
 		phone: { label: "845-274-7024", href: "tel:8452747024" },
 		email: {
 			label: "malkarivka27@gmail.com",
@@ -88,10 +83,8 @@ export const agents: AgentInfoType[] = [
 	},
 	{
 		name: "Dina Inzelbuch (Cohen)",
-		text: `
-			John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.
-		`,
-		imageURL: "images/pexels-pixabay-48195.jpg",
+		text: "",
+		imageURL: "images/avatar-3814049_1280.png",
 		phone: { label: "773-240-1335", href: "tel:7732401335" },
 		email: {
 			label: "dina.cohen@kw.com",
@@ -101,10 +94,8 @@ export const agents: AgentInfoType[] = [
 	},
 	{
 		name: 'Jennifer "Esther" Gisis',
-		text: `
-			John is a real estate agent with 10 years of experience. He has helped many families find their dream homes.
-		`,
-		imageURL: "images/pexels-pixabay-48195.jpg",
+		text: "",
+		imageURL: "images/avatar-3814049_1280.png",
 		phone: { label: "732-773-2149", href: "tel:7327732149" },
 		email: {
 			label: "Jennifergisis8@gmail.com ",
