@@ -39,7 +39,7 @@ export default function Footer() {
 							<div>
 								<Link href="/">
 									<img
-										src="logos/Jaskiel-logo-inverted.svg"
+										src="logos/Jaskiel-logo-inverted-org.svg"
 										height="100px"
 									/>
 								</Link>

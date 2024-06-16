@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://localhost:3006
+Host: https://www.thejaskielteam.com
 
 # Sitemaps
-Sitemap: https://localhost:3006/sitemap.xml
+Sitemap: https://www.thejaskielteam.com/sitemap.xml
