@@ -5,7 +5,7 @@ import { agents } from "../content"
 import { colorTheme } from "../../styles/colorTheme"
 
 export default function AgentsSection() {
-	const { accent } = colorTheme
+	const { accent, primary } = colorTheme
 	return (
 		<Container>
 			<section
@@ -17,12 +17,14 @@ export default function AgentsSection() {
 					marginBottom: "4rem",
 				}}>
 				<Typography
-					marginTop="2.5rem"
-					marginBottom="2.5rem"
-					textAlign="center"
-					variant="h4"
-					maxWidth="700px"
-					style={{ color: accent }}>
+					style={{
+						marginTop: "2.5rem",
+						marginBottom: "2.5rem",
+						textAlign: "center",
+						maxWidth: "700px",
+						color: accent,
+					}}
+					variant="h4">
 					The Jaskial Teams Agents are here to help you with all your
 					real estate needs.
 				</Typography>

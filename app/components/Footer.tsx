@@ -92,57 +92,7 @@ export default function Footer() {
 								</a>
 							</Typography>
 						</div>
-
-						{/* footer links */}
-						{/* {footerLinks.map((link, index) => (
-							<Link key={index} href={link.href}>
-								<Typography
-									variant="body2"
-									className="footer-link">
-									{link.label}
-								</Typography>
-							</Link>
-						))} */}
 					</div>
-
-					{/* not currently used */}
-					{/* agents link section */}
-					{/* {agents.map((item, index) => (
-						<Box
-							key={index}
-							sx={{
-								display: "flex",
-								flexDirection: "column",
-								gap: "18px",
-								alignItems: { xs: "center", md: "start" },
-								textWrap: "nowrap",
-							}}>
-							<div
-								style={{
-									display: "flex",
-									alignItems: "center",
-								}}>
-								<Typography variant="h6">
-									{item.name}
-								</Typography>
-								{item.phone && <LocalPhoneIcon />}
-								{item.email && <EmailIcon />}
-							</div>
-
-							{item.links.map((link, index) => (
-								<a key={index} href={link.href}>
-									<Typography
-										style={{ textWrap: "nowrap" }}
-										variant="body2"
-										className="footer-link"
-										width="fit-content">
-										{link.label}
-									</Typography>
-								</a>
-							))}
-						</Box>
-					))}
-					*/}
 				</Box>
 
 				<Typography

@@ -43,6 +43,12 @@ export default async function mailer(data: SurveyData) {
 		subject: "Thank you! We have received your request.",
 		text: "This is an automated response.",
 		html: `
+				<style>
+                	body { font-family: Arial, sans-serif; }
+                	h1 { color: #333; }
+                	p { margin-bottom: 10px; }
+                	hr { border-top: 1px solid #ccc; margin-bottom: 20px; }
+            	</style>
                 <h1>Thank you for reaching out to us!</h1>
                 <p>We have received your request and will get back to you as soon as possible.</p>
                 <p></p>

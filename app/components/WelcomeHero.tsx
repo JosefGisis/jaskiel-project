@@ -69,11 +69,11 @@ export default function WelcomeHero() {
 									{welcome.title}
 								</Typography>
 
-								<Typography variant="h6">
+								<Typography variant={"h6"}>
 									{welcome.subtitle}
 								</Typography>
 
-								<Link href="/#contact-us">
+								<Link href="/#footer">
 									<Button
 										variant="outlined"
 										size="large"

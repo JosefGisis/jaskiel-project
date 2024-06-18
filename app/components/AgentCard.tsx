@@ -16,9 +16,9 @@ export default function AgentCard({
 	phone: { label: string; href: string }
 	email: { label: string; href: string }
 }) {
-	const { accent, primary } = colorTheme
+	const { accent, primary, secondaryAccent } = colorTheme
 	return (
-		<Card variant="outlined" sx={{ borderColor: primary }}>
+		<Card variant="outlined" sx={{ background: primary, color: "white" }}>
 			<CardMedia
 				height="350px"
 				component="img"
@@ -32,6 +32,8 @@ export default function AgentCard({
 					flexDirection: "column",
 					justifyContent: "center",
 					gap: "0.5rem",
+					backgroundColor: primary,
+					color: accent,
 				}}>
 				<Typography fontStyle="oblique" textAlign="center" variant="h4">
 					{name}
@@ -42,14 +44,14 @@ export default function AgentCard({
 				{/* contact links */}
 				<div style={{ display: "flex", gap: 18 }}>
 					<LocalPhoneIcon style={{ color: accent }} />
-					<Link href={phone.href} color="#000000">
+					<Link href={phone.href} color="#FFFFFF">
 						{phone.label}
 					</Link>
 				</div>
 
 				<div style={{ display: "flex", gap: 18 }}>
 					<EmailIcon style={{ color: accent }} />
-					<Link href={email.href} color="#000000">
+					<Link href={email.href} color="#FFFFFF">
 						{email.label}
 					</Link>
 				</div>

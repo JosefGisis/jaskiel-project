@@ -20,7 +20,7 @@ export default function AboutSection() {
 							width: "100%",
 							background:
 								(index + 1) % 2 === 0
-									? primary
+									? "black"
 									: (index + 1) % 3 === 0
 										? neutral
 										: "white",

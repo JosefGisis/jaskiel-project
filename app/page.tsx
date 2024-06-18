@@ -1,4 +1,4 @@
-import { Box, Container, Stack, Typography } from "@mui/material"
+import { Stack } from "@mui/material"
 import SurveyForm from "./components/SurveyForm"
 import WelcomeHero from "./components/WelcomeHero"
 import AboutSection from "./components/AboutSection"
@@ -18,7 +18,8 @@ export default function Page() {
 				<AboutSection />
 				<AgentsSection />
 				<Testimonials />
-				<SurveyForm />
+				{/* waiting to set up email service */}
+				{/* <SurveyForm /> */}
 			</Stack>
 		</div>
 	)
