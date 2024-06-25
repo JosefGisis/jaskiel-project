@@ -18,8 +18,7 @@ export default function Page() {
 				<AboutSection />
 				<AgentsSection />
 				<Testimonials />
-				{/* waiting to set up email service */}
-				{/* <SurveyForm /> */}
+				<SurveyForm />
 			</Stack>
 		</div>
 	)

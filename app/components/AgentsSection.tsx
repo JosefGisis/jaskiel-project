@@ -25,7 +25,7 @@ export default function AgentsSection() {
 						color: accent,
 					}}
 					variant="h4">
-					The Jaskial Teams Agents are here to help you with all your
+					The Jaskiel Teams Agents are here to help you with all your
 					real estate needs.
 				</Typography>
 

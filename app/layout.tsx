@@ -5,6 +5,8 @@ import type { Metadata } from "next"
 import { ThemeProvider } from "@mui/material/styles"
 import { theme } from "./materialUI"
 
+import { Analytics } from "@vercel/analytics/react"
+
 // This import is required to import styles from survey-core.
 import "survey-core/defaultV2.min.css"
 
@@ -58,6 +60,9 @@ export default function RootLayout({
 					margin: 0,
 				}}>
 				<ThemeProvider theme={theme}>
+					{/* vercel analytics comp */}
+					<Analytics />
+
 					<ScrollToTop />
 					<main style={{ flex: 1, minHeight: "62vh" }}>
 						{children}

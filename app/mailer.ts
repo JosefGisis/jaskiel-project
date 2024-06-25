@@ -13,53 +13,25 @@ export interface SurveyData {
 }
 
 const transporter = nodeMailer.createTransport({
-	service: "gmail",
-	host: "smtp.gmail.com",
+	host: "smtppro.zoho.com",
 	port: 465,
 	secure: true,
 	auth: {
-		user: process.env.GMAIL_USER,
-		pass: process.env.GOOGLE_APP_PASSWORD,
+		user: process.env.ADMIN_EMAIL,
+		pass: process.env.ADMIN_PASSWORD,
 	},
 })
 
 export default async function mailer(data: SurveyData) {
 	await transporter.sendMail({
-		from: process.env.GMAIL_USER,
-		to: process.env.GMAIL_USER,
-		subject: "A customer has sent you a request!",
+		from: data.email,
+		to: process.env.GROUP_EMAIL,
+		subject: "Request received",
 		html: `
             <p>Customer email: ${data.email}</p>
             <p>Customer name: ${data.name?.first} ${data.name?.last}</p>
             ${data.phone ? `<p>Customer would like a callback at <a href="tel:${data.phone}"> ${data.phone}</p>` : ""}
             <p>Customer request: ${data.request}</p>
-            <p>Please respond promptly!</p>
         `,
-	})
-
-	await transporter.sendMail({
-		from: process.env.GMAIL_USER,
-		to: data.email,
-		subject: "Thank you! We have received your request.",
-		text: "This is an automated response.",
-		html: `
-				<style>
-                	body { font-family: Arial, sans-serif; }
-                	h1 { color: #333; }
-                	p { margin-bottom: 10px; }
-                	hr { border-top: 1px solid #ccc; margin-bottom: 20px; }
-            	</style>
-                <h1>Thank you for reaching out to us!</h1>
-                <p>We have received your request and will get back to you as soon as possible.</p>
-                <p></p>
-                <hr />
-                <p>Your request:</p>
-                <p>${data.request}</p>
-                <hr />
-                <p>Feel free to reply to this email if you have any additional questions or concerns or would like to change your original request.</p>
-                <p />
-                <p>Best regards,</p>
-                <p>-<i> Mattis Gisis</i></p>
-                `,
 	})
 }
