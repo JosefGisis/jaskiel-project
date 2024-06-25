@@ -4,6 +4,8 @@
 
 import nodeMailer from "nodemailer"
 
+const logoURL = "../public/logos/jaskiel-logo-inverted-org.svg"
+
 export interface SurveyData {
 	email: string
 	name?: {
@@ -30,10 +32,10 @@ export default async function mailer(data: SurveyData) {
 		to: process.env.GROUP_EMAIL,
 		subject: "Request received",
 		html: `
-            <p>Customer email: ${data.email}</p>
-            <p>Customer name: ${data.name?.first} ${data.name?.last}</p>
-            ${data.phone ? `<p>Customer would like a callback at <a href="tel:${data.phone}"> ${data.phone}</p>` : ""}
-            <p>Customer request: ${data.request}</p>
-        `,
+	        <p>Customer email: ${data.email}</p>
+	        <p>Customer name: ${data.name?.first} ${data.name?.last}</p>
+	        ${data.phone ? `<p>Customer would like a callback at <a href="tel:${data.phone}"> ${data.phone}</p>` : ""}
+	        <p>Customer request: ${data.request}</p>
+	    `,
 	})
 }

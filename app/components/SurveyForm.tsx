@@ -67,9 +67,6 @@ export default function SurveyForm() {
 
 	survey.showCompletedPage = false
 
-	// This is a hack to make the survey update on typing.
-	survey.textUpdateMode = "onTyping"
-
 	survey.onComplete.add((survey) => {
 		mailer(survey.data)
 		setCompleted(true)
