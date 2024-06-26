@@ -2,3 +2,5 @@ node_modules/
 .env
 .next
 jaskiel-content/
+.vercel
+.env.development.local

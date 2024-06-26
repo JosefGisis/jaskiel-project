@@ -20,6 +20,7 @@ export default function SurveyForm() {
 	survey.showCompletedPage = false
 
 	survey.onComplete.add((survey) => {
+		// Survey analytics tracks contact form submissions
 		track("Contact form submitted")
 		mailer(survey.data)
 		setCompleted(true)
