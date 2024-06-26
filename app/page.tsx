@@ -1,5 +1,5 @@
 import { Stack } from "@mui/material"
-import SurveyForm from "./components/SurveyForm"
+import SurveyForm from "./SurveyForm"
 import WelcomeHero from "./components/WelcomeHero"
 import AboutSection from "./components/AboutSection"
 import AgentsSection from "./components/AgentsSection"

@@ -1,10 +1,6 @@
 "use server"
 
-// for vercel update
-
 import nodeMailer from "nodemailer"
-
-const logoURL = "../public/logos/jaskiel-logo-inverted-org.svg"
 
 export interface SurveyData {
 	email: string

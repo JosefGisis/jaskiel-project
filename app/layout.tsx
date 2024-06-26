@@ -5,12 +5,14 @@ import type { Metadata } from "next"
 import { ThemeProvider } from "@mui/material/styles"
 import { theme } from "./materialUI"
 
+// Vercel Analytics
 import { Analytics } from "@vercel/analytics/react"
 
 // This import is required to import styles from survey-core.
 import "survey-core/defaultV2.min.css"
 
 import Footer from "./components/Footer"
+// Scroll to top button.
 import ScrollToTop from "./components/ScrollToTop"
 
 export const metadata: Metadata = {
@@ -59,10 +61,10 @@ export default function RootLayout({
 					flexDirection: "column",
 					margin: 0,
 				}}>
-				<ThemeProvider theme={theme}>
-					{/* vercel analytics comp */}
-					<Analytics />
+				{/* vercel analytics comp */}
+				<Analytics />
 
+				<ThemeProvider theme={theme}>
 					<ScrollToTop />
 					<main style={{ flex: 1, minHeight: "62vh" }}>
 						{children}

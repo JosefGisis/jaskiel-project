@@ -1,96 +1,56 @@
-"use client"
-
-import React, { useState } from "react"
-import { Survey } from "survey-react-ui"
-import { Model } from "survey-core"
-import mailer from "../mailer"
-import CompletedMessage from "./CompletedMessage"
-import { Typography, Container } from "@mui/material"
-
-export default function SurveyForm() {
-	const [completed, setCompleted] = useState(false)
-
-	const surveyJson = {
-		logoPosition: "right",
-		showQuestionNumbers: "false",
-		pages: [
-			{
-				name: "page1",
-				elements: [
-					{
-						type: "text",
-						name: "email",
-						title: "Email",
-						isRequired: true,
-						inputType: "email",
-					},
-					{
-						type: "multipletext",
-						name: "name",
-						title: "Name",
-						items: [
-							{
-								name: "first",
-								title: "First",
-							},
-							{
-								name: "last",
-								title: "Last",
-							},
-						],
-						colCount: 2,
-					},
-					{
-						type: "text",
-						name: "phone",
-						title: "Phone Number",
-						description:
-							"Provide a phone number if you would like us to give you a callback.",
-						inputType: "tel",
-					},
-					{
-						type: "comment",
-						description:
-							"Please provide any questions, requests, or quotes.",
-						name: "request",
-						title: "Question",
-						isRequired: true,
-					},
-				],
-			},
-		],
-	}
-	const survey = new Model(surveyJson)
-
-	// @ts-ignore
-	survey.applyTheme(themeJson)
-
-	survey.showCompletedPage = false
-
-	survey.onComplete.add((survey) => {
-		mailer(survey.data)
-		setCompleted(true)
-	})
-
-	return (
-		<Container maxWidth="md">
-			{completed ? (
-				<CompletedMessage setCompleted={setCompleted} />
-			) : (
-				<div id="contact-us">
-					<Typography variant="h3" textAlign="center">
-						Contact Us
-					</Typography>
-					<Typography variant="h6" textAlign="center">
-						Reach out with any questions comments or concerns.
-					</Typography>
-					<Survey model={survey} />
-				</div>
-			)}
-		</Container>
-	)
+// JSON for the survey form structure and content.
+export const surveyJson = {
+	logoPosition: "right",
+	showQuestionNumbers: "false",
+	pages: [
+		{
+			name: "page1",
+			elements: [
+				{
+					type: "text",
+					name: "email",
+					title: "Email",
+					isRequired: true,
+					inputType: "email",
+				},
+				{
+					type: "multipletext",
+					name: "name",
+					title: "Name",
+					items: [
+						{
+							name: "first",
+							title: "First",
+						},
+						{
+							name: "last",
+							title: "Last",
+						},
+					],
+					colCount: 2,
+				},
+				{
+					type: "text",
+					name: "phone",
+					title: "Phone Number",
+					description:
+						"Provide a phone number if you would like us to give you a callback.",
+					inputType: "tel",
+				},
+				{
+					type: "comment",
+					description:
+						"Please provide any questions, requests, or quotes.",
+					name: "request",
+					title: "Question",
+					isRequired: true,
+				},
+			],
+		},
+	],
 }
 
+// JSON for the survey form theme.
 export const themeJson = {
 	themeName: "plain",
 	colorPalette: "light",
