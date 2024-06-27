@@ -73,7 +73,7 @@ export default function WelcomeHero() {
 									{welcome.subtitle}
 								</Typography>
 
-								<Link href="/#footer">
+								<Link href="/#contact-us">
 									<Button
 										variant="outlined"
 										size="large"
