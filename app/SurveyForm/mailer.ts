@@ -2,11 +2,8 @@
 
 import nodeMailer from "nodemailer"
 
-const LOGO_SVG_URL =
-	"https://y0cvwbztvkvzidgv.public.blob.vercel-storage.com/jaskiel-logo-inverted-org-2J5Y0yGXfNGDU9mJizFqlbwLNXvTSu.svg"
-
 const LOGO_PNG_URL =
-	"https://y0cvwbztvkvzidgv.public.blob.vercel-storage.com/jaskiel-logo-inverted-org-XIzicXRbi6wyQ5bzBEDUmVC8DXH70b.png"
+	"https://y0cvwbztvkvzidgv.public.blob.vercel-storage.com/jaskiel/Jaskiel-logo-inverted-org-T4RToqslXxZXTPdMlM6PkHHje6KN5e.png"
 
 export interface SurveyData {
 	email: string

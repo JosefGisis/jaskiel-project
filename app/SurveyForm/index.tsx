@@ -9,6 +9,7 @@ import { track } from "@vercel/analytics"
 
 import mailer from "./mailer"
 import CompletedMessage from "./CompletedMessage"
+import uploadBlob from "../uploadBlob"
 
 export default function SurveyForm() {
 	const [completed, setCompleted] = useState(false)
@@ -24,6 +25,10 @@ export default function SurveyForm() {
 		track("Contact form submitted")
 		mailer(survey.data)
 		setCompleted(true)
+	})
+
+	survey.onValueChanged.add((survey, options) => {
+		uploadBlob("public/logos", "Jaskiel-logo-inverted-org.png")
 	})
 
 	return (

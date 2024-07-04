@@ -25,7 +25,7 @@ export default async function uploadBlob(filePath: string, fileName: string) {
 	)
 	const fileContent = fs.readFileSync(absolutePath)
 
-	return await put(fileName, fileContent, {
+	return await put(`jaskiel/${fileName}`, fileContent, {
 		access: "public",
 		contentType: "svg",
 	})
