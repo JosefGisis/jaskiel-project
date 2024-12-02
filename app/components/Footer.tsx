@@ -4,7 +4,8 @@ import EmailIcon from "@mui/icons-material/Email"
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone"
 import { colorTheme } from "../../styles/colorTheme"
 import Link from "next/link"
-import { footerLinks } from "../content"
+
+import type { LinkType } from "../types"
 
 export default function Footer() {
 	const { phone, email, address } = footerLinks
@@ -103,4 +104,21 @@ export default function Footer() {
 			</Container>
 		</div>
 	)
+}
+
+export const footerLinks: {
+	phone: LinkType
+	email: LinkType
+	address: LinkType
+	otherLinks: LinkType[]
+} = {
+	phone: { label: "848-223-2295", href: "tel:8482232295" },
+	email: { label: "bjaskiel@gmail.com", href: "mailto:bjaskiel@gmail.com" },
+	address: {
+		label: "353 N County Line Rd, Jackson Township, NJ 08527",
+		href: "https://www.google.com/maps/place/Keller+Williams+Monmouth%2FOcean+-+John+Meeker/@40.13925,-74.3017685,17z/data=!3m1!4b1!4m6!3m5!1s0x89c17f46cf372a79:0xffc481e5d2923c3c!8m2!3d40.13925!4d-74.3017685!16s%2Fg%2F11g1ppy0vt?entry=ttu",
+	},
+	otherLinks: [
+		{ label: "Zillow", href: "https://www.zillow.com/profile/bjaskiel" },
+	],
 }

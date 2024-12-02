@@ -1,5 +1,4 @@
 import { Box, Button, Container, Typography } from "@mui/material"
-import { welcome } from "../content"
 import { colorTheme } from "../../styles/colorTheme"
 import Link from "next/link"
 
@@ -93,4 +92,10 @@ export default function WelcomeHero() {
 			</Box>
 		</div>
 	)
+}
+
+export const welcome = {
+	title: "Your Dream Home is Closer than You Think!",
+	subtitle:
+		"The Jaskiel Team is your premiere real estate agency for Lakewood, Jackson, Howell, Toms River, and neighboring communities.",
 }
