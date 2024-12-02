@@ -33,9 +33,12 @@ export default function AgentCard({
 					justifyContent: "center",
 					gap: "0.5rem",
 					backgroundColor: primary,
-					color: accent,
 				}}>
-				<Typography fontStyle="oblique" textAlign="center" variant="h4">
+				<Typography
+					fontStyle="oblique"
+					textAlign="center"
+					variant="h4"
+					color={accent}>
 					{name}
 				</Typography>
 

@@ -22,7 +22,6 @@ export default function AgentsSection() {
 						marginBottom: "2.5rem",
 						textAlign: "center",
 						maxWidth: "700px",
-						color: accent,
 					}}
 					variant="h4">
 					The Jaskiel Teams Agents are here to help you with all your
