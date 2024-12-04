@@ -42,7 +42,7 @@ export default function AgentCard({
 					{name}
 				</Typography>
 
-				<Typography variant="body1">{text}</Typography>
+				<Typography variant="subtitle1">{text}</Typography>
 
 				{/* contact links */}
 				<div style={{ display: "flex", gap: 18 }}>
