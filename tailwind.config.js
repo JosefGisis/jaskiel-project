@@ -12,7 +12,7 @@ module.exports = {
 	daisyui: {
 		themes: [
 			{
-				lightTheme: {
+				day: {
 					primary: PRIMARY_COLOR,
 
 					secondary: SECONDARY_COLOR,
@@ -33,7 +33,7 @@ module.exports = {
 				},
 			},
 			{
-				darkTheme: {
+				night: {
 					primary: PRIMARY_COLOR,
 
 					secondary: SECONDARY_COLOR,
@@ -55,4 +55,5 @@ module.exports = {
 			},
 		],
 	},
+	darkMode: ["selector", '[data-theme="night"]'],
 }
