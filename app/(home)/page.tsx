@@ -1,4 +1,3 @@
-import { Stack } from "@mui/material"
 import SurveyForm from "../SurveyForm"
 import WelcomeHero from "./components/WelcomeHero"
 import AboutSection from "./components/AboutSection"
@@ -14,13 +13,13 @@ export default function Page() {
 				flexDirection: "column",
 				justifyContent: "center",
 			}}>
-			<Stack gap={4}>
-				<WelcomeHero />
+			<div className="stack">
+				{/* <WelcomeHero />
 				<AboutSection />
 				<AgentsSection />
 				<Testimonials />
-				<SurveyForm />
-			</Stack>
+				<SurveyForm /> */}
+			</div>
 		</div>
 	)
 }

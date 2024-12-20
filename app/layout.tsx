@@ -2,8 +2,6 @@ import "../styles/global.css"
 
 import type { Metadata } from "next"
 
-import { ThemeProvider } from "@mui/material/styles"
-
 // Vercel Analytics
 import { Analytics } from "@vercel/analytics/react"
 
@@ -59,12 +57,12 @@ export default function RootLayout({
 				{/* vercel analytics comp */}
 				<Analytics />
 
-				<ScrollToTop />
+				{/* <ScrollToTop /> */}
 
 				<Header />
 				<main style={{ flex: 1, minHeight: "62vh" }}>{children}</main>
 
-				<Footer />
+				{/* <Footer /> */}
 			</body>
 		</html>
 	)
