@@ -1,8 +1,6 @@
 import { Box, Container, Typography } from "@mui/material"
-import { colorTheme } from "../../styles/colorTheme"
 
 export default function AboutSection() {
-	const { neutral, primary } = colorTheme
 	return (
 		<section>
 			<div
@@ -17,14 +15,14 @@ export default function AboutSection() {
 						key={index}
 						sx={{
 							width: "100%",
-							background:
-								(index + 1) % 2 === 0
-									? "black"
-									: (index + 1) % 3 === 0
-										? neutral
-										: "white",
-							color: (index + 1) % 2 === 0 ? "white" : "black",
-							paddingBlock: "70px",
+							// background:
+							// 	(index + 1) % 2 === 0
+							// 		? "black"
+							// 		: (index + 1) % 3 === 0
+							// 			? neutral
+							// 			: "white",
+							// color: (index + 1) % 2 === 0 ? "white" : "black",
+							// paddingBlock: "70px",
 						}}>
 						{/* depending on screen width the image and text is displayed in different orders */}
 						<Container

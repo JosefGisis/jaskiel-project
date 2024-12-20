@@ -1,11 +1,9 @@
 import { Container, Link, Typography } from "@mui/material"
-import { colorTheme } from "../../styles/colorTheme"
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2"
 
 export default function Testimonials() {
-	const { neutral } = colorTheme
 	return (
-		<section style={{ backgroundColor: neutral, paddingBlock: "3rem" }}>
+		<section style={{ paddingBlock: "3rem" }}>
 			<Container maxWidth="lg">
 				{/* responsive grid */}
 				<Grid2

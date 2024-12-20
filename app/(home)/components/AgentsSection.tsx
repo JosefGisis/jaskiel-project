@@ -1,8 +1,8 @@
 import { Container, Typography } from "@mui/material"
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2"
 import AgentCard from "./AgentCard"
-import { colorTheme } from "../../styles/colorTheme"
-import { LinkType } from "../types"
+import { colorTheme } from "../../../styles/colorTheme"
+import { LinkType } from "../../types"
 
 export default function AgentsSection() {
 	const { accent, primary } = colorTheme

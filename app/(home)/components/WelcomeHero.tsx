@@ -1,11 +1,9 @@
 import { Box, Button, Container, Typography } from "@mui/material"
-import { colorTheme } from "../../styles/colorTheme"
 import Link from "next/link"
 
 const backgroundImage = "images/pexels-binyaminmellish-1396122.jpg"
 
 export default function WelcomeHero() {
-	const { primary } = colorTheme
 	return (
 		<div>
 			{/* background image box */}
@@ -76,10 +74,12 @@ export default function WelcomeHero() {
 									<Button
 										variant="outlined"
 										size="large"
-										sx={{
-											color: primary,
-											borderColor: primary,
-										}}>
+										sx={
+											{
+												// color: primary,
+												// borderColor: primary,
+											}
+										}>
 										<Typography variant="h6">
 											Contact Us
 										</Typography>

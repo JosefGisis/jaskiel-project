@@ -9,6 +9,7 @@ const ERROR_COLOR = "#ff0000"
 module.exports = {
 	content: ["./app/**/*.{js,ts,jsx,tsx,mdx}"],
 	plugins: [require("daisyui")],
+	theme: {},
 	daisyui: {
 		themes: [
 			{
