@@ -53,16 +53,19 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className="flex flex-col items-center m-0">
+			<body>
 				{/* vercel analytics comp */}
 				<Analytics />
 
 				{/* <ScrollToTop /> */}
 
-				<Header />
-				<main className="flex-1 min-h-[62vh]">{children}</main>
+				<div className="flex flex-col justify-between items-center min-h-screen">
+					<Header />
 
-				<Footer />
+					<main className="flex-1 w-full">{children}</main>
+
+					<Footer />
+				</div>
 			</body>
 		</html>
 	)

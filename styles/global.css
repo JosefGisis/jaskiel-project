@@ -34,8 +34,6 @@ a {
 	text-decoration: underline;
 }
 
-.welcome-hero {
-	background-image: url("/images/pexels-binyaminmellish-1396122.jpg");
-	background-size: cover;
-	background-position: center;
+.lg-container {
+	@apply w-full max-w-screen-lg px-6 mx-auto;
 }
