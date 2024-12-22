@@ -37,3 +37,6 @@ a {
 .lg-container {
 	@apply w-full max-w-screen-lg px-6 mx-auto;
 }
+.xl-container {
+	@apply w-full max-w-screen-xl px-6 mx-auto;
+}
