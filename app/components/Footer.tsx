@@ -4,100 +4,77 @@ import type { LinkType } from "../types"
 
 export default function Footer() {
 	const { phone, email, address } = footerLinks
-	// return (
-	// 	<div
-	// 		id="footer"
-	// 		style={{
-	// 			backgroundColor: primary,
-	// 			color: "white",
-	// 		}}>
-	// 		<Container maxWidth="lg">
-	// 			{/* responsive flex is not currently used */}
-	// 			<Box
-	// 				sx={{
-	// 					display: "flex",
-	// 					gap: "40px",
-	// 					flexDirection: { xs: "column", md: "row" },
-	// 					justifyContent: "space-between",
-	// 					mt: "60px",
-	// 				}}>
-	// 				<div
-	// 					id="business-links"
-	// 					style={{
-	// 						display: "flex",
-	// 						flexDirection: "column",
-	// 						gap: 15,
-	// 					}}>
-	// 					{/* logo and home page links */}
+	return (
+		<div id="footer" className="bg-black text-white">
+			<div className="max-w-screen-lg">
+				{/* responsive flex is not currently used */}
+				<div className="flex gap-10 xs:flex-col justify-between mt-14">
+					<div id="business-links" className="flex flex-col gap-10">
+						{/* logo and home page links */}
 
-	// 					<div style={{ display: "flex", gap: "8px" }}>
-	// 						<div>
-	// 							<Link href="/">
-	// 								<img
-	// 									src="logos/Jaskiel-logo-inverted-org.svg"
-	// 									height="100px"
-	// 								/>
-	// 							</Link>
-	// 						</div>
-	// 						<div
-	// 							style={{
-	// 								width: "1px",
-	// 								height: "100px",
-	// 								backgroundColor: "white",
-	// 								marginInline: "10px",
-	// 							}}
-	// 						/>
-	// 						<a href="https://www.kw.com/">
-	// 							<img
-	// 								src="logos/KWLogo-white-transparent.svg"
-	// 								height="100px"
-	// 							/>
-	// 						</a>
-	// 					</div>
-	// 					<Typography
-	// 						fontSize="0.8rem"
-	// 						variant="body2"
-	// 						marginBottom="1.5rem">
-	// 						The Jaskiel Team is a subdivision of Keller Williams
-	// 						Realty
-	// 					</Typography>
+						<div style={{ display: "flex", gap: "8px" }}>
+							<div>
+								<Link href="/">
+									<img
+										src="logos/Jaskiel-logo-inverted-org.svg"
+										height="100px"
+									/>
+								</Link>
+							</div>
+							<div
+								style={{
+									width: "1px",
+									height: "100px",
+									backgroundColor: "white",
+									marginInline: "10px",
+								}}
+							/>
+							<a href="https://www.kw.com/">
+								<img
+									src="logos/KWLogo-white-transparent.svg"
+									height="100px"
+								/>
+							</a>
+						</div>
+						<p className="text-sm mb-6">
+							The Jaskiel Team is a subdivision of Keller Williams
+							Realty
+						</p>
 
-	// 					{/* contact information links */}
-	// 					<div style={{ display: "flex", gap: 10 }}>
-	// 						<LocalPhoneIcon />
-	// 						<Typography id="phone" className="footer-link">
-	// 							<a href={phone.href}>{phone.label}</a>
-	// 						</Typography>
-	// 					</div>
+						{/* contact information links */}
+						<div style={{ display: "flex", gap: 10 }}>
+							{/* <LocalPhoneIcon /> */}
+							<p id="phone" className="footer-link">
+								<a href={phone.href}>{phone.label}</a>
+							</p>
+						</div>
 
-	// 					<div style={{ display: "flex", gap: 10 }}>
-	// 						<EmailIcon />
-	// 						<Typography id="email" className="footer-link">
-	// 							<a className="footer-link" href={email.href}>
-	// 								{email.label}
-	// 							</a>
-	// 						</Typography>
-	// 					</div>
+						<div style={{ display: "flex", gap: 10 }}>
+							{/* <EmailIcon /> */}
+							<p id="email" className="footer-link">
+								<a className="footer-link" href={email.href}>
+									{email.label}
+								</a>
+							</p>
+						</div>
 
-	// 					<div style={{ display: "flex", gap: 10 }}>
-	// 						<PlaceIcon />
-	// 						<Typography id="address" className="footer-item">
-	// 							<a className="footer-link" href={address.href}>
-	// 								{address.label}
-	// 							</a>
-	// 						</Typography>
-	// 					</div>
-	// 				</div>
-	// 			</Box>
+						<div style={{ display: "flex", gap: 10 }}>
+							{/* <PlaceIcon /> */}
+							<p id="address" className="footer-item">
+								<a className="footer-link" href={address.href}>
+									{address.label}
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
 
-	// 			<Typography
-	// 				variant="body1"
-	// 				sx={{ my: "60px", textAlign: "center" }}>
-	// 				©️ 2024 The Jaskiel Team - Jackson, NJ 08527
-	// 			</Typography>
-	// 		</Container>
-	// 	</div>
-	// )
+				<p className="my-14 text-center">
+					©️ 2024 The Jaskiel Team - Jackson, NJ 08527
+				</p>
+			</div>
+		</div>
+	)
 }
 
 export const footerLinks: {

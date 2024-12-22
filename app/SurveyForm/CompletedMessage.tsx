@@ -3,38 +3,24 @@ export default function ({
 }: {
 	setCompleted: (completed: boolean) => void
 }) {
-	// return (
-	// 	<div>
-	// 		<Box
-	// 			sx={{
-	// 				marginBottom: "1.5rem",
-	// 				padding: "0.5rem",
-	// 			}}>
-	// 			<Typography textAlign="center" variant="h4">
-	// 				Thank you for reaching out to us!
-	// 			</Typography>
-	// 		</Box>
-	// 		<Typography
-	// 			marginBottom="1.5rem"
-	// 			textAlign="center"
-	// 			variant="subtitle1">
-	// 			We have received your message and will get back to you as soon
-	// 			as possible.
-	// 		</Typography>
-	// 		<div
-	// 			style={{
-	// 				marginBottom: "4rem",
-	// 				marginInline: "auto",
-	// 				display: "flex",
-	// 				justifyContent: "center",
-	// 			}}>
-	// 			<Button
-	// 				onClick={() => setCompleted(false)}
-	// 				variant="outlined"
-	// 				style={{ color: primary }}>
-	// 				Send another message
-	// 			</Button>
-	// 		</div>
-	// 	</div>
-	// )
+	return (
+		<div>
+			<div className="mb-6 p-2">
+				<h4 className="text-center text-xl">
+					Thank you for reaching out to us!
+				</h4>
+			</div>
+			<p className="text-center text-lg mb-6">
+				We have received your message and will get back to you as soon
+				as possible.
+			</p>
+			<div className="flex justify-center mb-16 mx-auto">
+				<button
+					onClick={() => setCompleted(false)}
+					className="btn btn-primary btn-outline">
+					Send another message
+				</button>
+			</div>
+		</div>
+	)
 }

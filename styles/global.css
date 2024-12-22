@@ -33,3 +33,9 @@ a {
 .footer-link:hover {
 	text-decoration: underline;
 }
+
+.welcome-hero {
+	background-image: url("/images/pexels-binyaminmellish-1396122.jpg");
+	background-size: cover;
+	background-position: center;
+}

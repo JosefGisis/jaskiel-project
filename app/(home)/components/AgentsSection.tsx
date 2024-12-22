@@ -2,47 +2,33 @@ import AgentCard from "./AgentCard"
 import { LinkType } from "../../types"
 
 export default function AgentsSection() {
-	// return (
-	// 	<Container>
-	// 		<section
-	// 			id="services"
-	// 			style={{
-	// 				display: "flex",
-	// 				flexDirection: "column",
-	// 				alignItems: "center",
-	// 				marginBottom: "4rem",
-	// 			}}>
-	// 			<Typography
-	// 				style={{
-	// 					marginTop: "2.5rem",
-	// 					marginBottom: "2.5rem",
-	// 					textAlign: "center",
-	// 					maxWidth: "700px",
-	// 				}}
-	// 				variant="h4">
-	// 				The Jaskiel Teams Agents are here to help you with all your
-	// 				real estate needs.
-	// 			</Typography>
-	// 			<Grid2
-	// 				container
-	// 				rowSpacing={5}
-	// 				columnSpacing={3}
-	// 				justifyItems="center">
-	// 				{agents.map((item, index) => (
-	// 					<Grid2 key={index} xs={12} sm={6} md={4}>
-	// 						<AgentCard
-	// 							text={item.text}
-	// 							url={item.imageURL}
-	// 							name={item.name}
-	// 							phone={item.phone}
-	// 							email={item.email}
-	// 						/>
-	// 					</Grid2>
-	// 				))}
-	// 			</Grid2>
-	// 		</section>
-	// 	</Container>
-	// )
+	return (
+		<div>
+			<section id="services" className="flex flex-col items-center mb-16">
+				<h4 className="my-10 text-center max-w-[700px] text-2xl">
+					The Jaskiel Teams Agents are here to help you with all your
+					real estate needs.
+				</h4>
+				{/* <Grid2
+					container
+					rowSpacing={5}
+					columnSpacing={3}
+					justifyItems="center">
+					{agents.map((item, index) => (
+						<Grid2 key={index} xs={12} sm={6} md={4}>
+							<AgentCard
+								text={item.text}
+								url={item.imageURL}
+								name={item.name}
+								phone={item.phone}
+								email={item.email}
+							/>
+						</Grid2>
+					))}
+				</Grid2> */}
+			</section>
+		</div>
+	)
 }
 
 interface AgentInfoType {
