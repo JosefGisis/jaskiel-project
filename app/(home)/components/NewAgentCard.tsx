@@ -16,7 +16,7 @@ export default function NewAgentCard({
 	email: { label: string; href: string }
 }) {
 	return (
-		<div className="card max-w-[22rem] w-full shadow-lg">
+		<div className="card max-w-[20rem] w-full shadow-lg">
 			<figure>
 				<img src={url} />
 			</figure>

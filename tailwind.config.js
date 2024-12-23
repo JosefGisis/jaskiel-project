@@ -17,7 +17,7 @@ module.exports = {
 
 					secondary: SECONDARY_COLOR,
 
-					accent: "#111827",
+					accent: "#000000",
 
 					neutral: NEUTRAL_COLOR,
 
