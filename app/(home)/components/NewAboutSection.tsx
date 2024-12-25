@@ -1,32 +1,30 @@
 export default function NewAboutSection() {
 	return (
-		<section id="about-section">
-			<div className="xl-container flex flex-col items-center gap-10 my-10">
-				<h3 className="text-3xl">Who Are We?</h3>
-				<p className="max-w-lg">
-					We are The Jaskiel Team, your premier real estate agency
-					serving Lakewood, Jackson, Howell, Toms River and the
-					surrounding communities. Founded by the award-winning real
-					estate professional Baila Jackson, our team is dedicated to
-					providing exceptional service and expertise in every aspect
-					of the real estate process.
-				</p>
+		<section className="section xl-container">
+			<h3 className="section-title">Who Are We?</h3>
+			<p className="max-w-lg">
+				We are The Jaskiel Team, your premier real estate agency serving
+				Lakewood, Jackson, Howell, Toms River and the surrounding
+				communities. Founded by the award-winning real estate
+				professional Baila Jackson, our team is dedicated to providing
+				exceptional service and expertise in every aspect of the real
+				estate process.
+			</p>
 
-				<h3 className="text-3xl">
-					Why <span className="bg-primary">The Jaskiel Team</span>?
-				</h3>
+			<h3 className="section-title">
+				Why <span className="bg-primary">The Jaskiel Team</span>?
+			</h3>
 
-				<div className="flex flex-col lg:flex-row justify-between items-start">
-					{about.map(({ image, text, title }, index) => (
-						<div className="flex basis-1/3 lg:flex-col items-center gap-4 p-4">
-							<img src={image} className="h-[100px]" />
-							<div className="flex flex-col gap-4 items-center justify-center">
-								<h4 className="text-3xl">{title}</h4>
-								<p>{text} </p>
-							</div>
+			<div className="flex flex-col lg:flex-row justify-between items-start">
+				{about.map(({ image, text, title }, index) => (
+					<div className="flex basis-1/3 lg:flex-col items-center gap-4 p-4">
+						<img src={image} className="h-[100px]" />
+						<div className="flex flex-col gap-4 items-center justify-center">
+							<h4 className="text-3xl">{title}</h4>
+							<p>{text} </p>
 						</div>
-					))}
-				</div>
+					</div>
+				))}
 			</div>
 		</section>
 	)

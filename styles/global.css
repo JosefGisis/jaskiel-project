@@ -40,3 +40,11 @@ a {
 .xl-container {
 	@apply w-full max-w-screen-xl px-6 mx-auto;
 }
+
+.section {
+	@apply py-10 w-full;
+}
+
+.section-title {
+	@apply text-3xl text-gray-800 max-w-xl text-center;
+}

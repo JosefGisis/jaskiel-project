@@ -31,13 +31,13 @@ export default function SurveyForm() {
 	})
 
 	return (
-		<div className="w-full max-w-screen-md">
+		<div className="section">
 			{completed ? (
 				<CompletedMessage setCompleted={setCompleted} />
 			) : (
 				<div id="contact-us">
-					<h3 className="text-2xl text-center">Contact Us</h3>
-					<h6 className="text-center text-lg">
+					<h3 className="section-title">Contact Us</h3>
+					<h6 className="text-center text-xl">
 						Reach out with any questions comments or concerns.
 					</h6>
 					<Survey model={survey} />

@@ -4,23 +4,21 @@ import NewAgentCard from "./NewAgentCard"
 
 export default function NewAgentsSection() {
 	return (
-		<section id="services w-screen">
-			<div className="xl-container flex flex-col items-center mb-16">
-				<h4 className="my-10 text-center max-w-[700px] text-3xl">
-					Meet the <span className="bg-primary">Team</span>
-				</h4>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-auto-columns:minmax(0, 1fr) w-screen gap-5 justify-items-center">
-					{agents.map((item, index) => (
-						<NewAgentCard
-							key={index}
-							text={item.text}
-							url={item.imageURL}
-							name={item.name}
-							phone={item.phone}
-							email={item.email}
-						/>
-					))}
-				</div>
+		<section id="agents-section" className="section xl-container">
+			<h4 className="section-title">
+				Meet the <span className="bg-primary">Team</span>
+			</h4>
+			<div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-auto-columns:minmax(0, 1fr) gap-10 justify-items-center">
+				{agents.map((item, index) => (
+					<NewAgentCard
+						key={index}
+						text={item.text}
+						url={item.imageURL}
+						name={item.name}
+						phone={item.phone}
+						email={item.email}
+					/>
+				))}
 			</div>
 		</section>
 	)
