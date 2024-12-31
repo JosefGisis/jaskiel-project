@@ -42,9 +42,18 @@ a {
 }
 
 .section {
-	@apply py-10 w-full;
+	@apply py-10 w-screen;
 }
 
 .section-title {
 	@apply text-3xl text-gray-800 max-w-xl text-center;
+}
+
+.section-subtitle {
+	@apply text-lg text-gray-600 max-w-2xl text-center;
+}
+
+.sd-element {
+	border-width: 1px !important;
+	border-color: rgb(232, 232, 232) !important;
 }

@@ -6,56 +6,67 @@ export default function NewTestimonials() {
 	)
 
 	const TestimonialSubheader = (
-		<h4 className="text-center text-xl max-w-lg">
-			Our clients are our biggest supporters. Check out our{" "}
-			<Link
-				href="https://www.zillow.com/profile/bjaskiel"
-				className="link link-hover font-semibold">
-				Zillow
-			</Link>{" "}
-			page to see a full listing of our testimonials.
-		</h4>
+		<div className="px-20">
+			<h4 className="section-subtitle">
+				Our clients are our biggest supporters. Check out our{" "}
+				<Link
+					href="https://www.zillow.com/profile/bjaskiel"
+					className="link link-hover font-semibold">
+					Zillow
+				</Link>{" "}
+				page to see a full listing of our testimonials.
+			</h4>
+		</div>
 	)
 	const TestimonyCarousel = (
-		<div className=" flex flex-col w-full items-center gap-5">
-			<div className="xl-container flex flex-col w-full  gap-5 items-center justify-center">
+		<div className="flex flex-col w-full items-center gap-5">
+			<div className="xl-container flex flex-col w-full gap-5 items-center justify-center px-20">
 				{TestimonialHeader}
 				{TestimonialSubheader}
 			</div>
 
-			<div className="carousel carousel-center rounded-box max-w-full space-x-5 py-4 w-[100vw] h-[25rem] px-20">
-				{testimonials.map(({ text, name }, index) => (
-					<div
-						key={index}
-						id={`item${index + 1}`}
-						className="carousel-item relative max-w-sm w-full h-full">
-						<div className="card bg-white shadow-lg border-[1px] border-secondary">
-							<div className="card-body h-full flex flex-col gap-5 p-8 text-black">
-								<p className="text-md text-justify max-h-[80%] overflow-auto">
-									{text}
-								</p>
-								<div className="flex w-full justify-end">
-									<i className="text-lg">- {name}</i>
+			<div className="h-[25rem] w-screen relative">
+				<div
+					className={`carousel carousel-center rounded-box max-w-full space-x-5 py-4 w-full h-full px-20`}>
+					{testimonials.map(({ text, name }, index) => (
+						<div
+							key={index}
+							id={`item${index + 1}`}
+							className="carousel-item relative max-w-sm w-full h-full">
+							<div className="card bg-white shadow-lg border-[1px] border-secondary">
+								<div className="card-body h-full flex flex-col gap-5 p-8 text-black">
+									<p className="text-md text-justify max-h-[80%] overflow-auto">
+										{text}
+									</p>
+									<div className="flex w-full justify-end">
+										<i className="text-lg">- {name}</i>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				))}
-			</div>
+					))}
+				</div>
 
-			<div className="w-20 h-[80%] absolute left-0 bg-gradient-to-r from-neutral to-transparent" />
-			<div className="w-20 h-[80%] absolute right-0 bg-gradient-to-l from-neutral to-transparent" />
+				<div
+					className={`w-20 absolute left-0 top-0 bottom-0 bg-gradient-to-r from-neutral to-transparent`}
+				/>
+				<div
+					className={`w-20 absolute right-0 top-0 bottom-0 bg-gradient-to-l from-neutral to-transparent`}
+				/>
+			</div>
 		</div>
 	)
 
 	const TestimonyGrid = (
-		<div className="xl-container grid grid-cols-2 grid-auto-columns:minmax(0, 1fr) gap-10 justify-items-center">
+		<div className="xl-container grid grid-cols-2 grid-auto-columns:minmax(0, 1fr) gap-10 justify-items-center py-2">
 			<div className="flex flex-col gap-8 items-center justify-center">
 				{TestimonialHeader}
 				{TestimonialSubheader}
 			</div>
 			{testimonials.map(({ name, text }, index) => (
-				<div key={index} className="flex flex-col gap-5">
+				<div
+					key={index}
+					className="flex flex-col gap-5 px-2 text-black">
 					<p>"{text}"</p>
 					<div className="w-full flex justify-end">
 						<i className="text-lg mr-6">- {name}</i>
@@ -66,9 +77,11 @@ export default function NewTestimonials() {
 	)
 
 	return (
-		<section className="section bg-neutral flex flex-col items-center justify-center">
-			<div className="md:hidden w-full h-full">{TestimonyCarousel}</div>
-			<div className="hidden md:block w-full h-full">{TestimonyGrid}</div>
+		<section id="testimonials-section" className="section">
+			<div className="w-full bg-neutral flex flex-col items-center justify-center py-12">
+				<div className="md:hidden w-full">{TestimonyCarousel}</div>
+				<div className="hidden md:block w-full">{TestimonyGrid}</div>
+			</div>
 		</section>
 	)
 }

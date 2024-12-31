@@ -31,18 +31,18 @@ export default function SurveyForm() {
 	})
 
 	return (
-		<div className="section">
-			{completed ? (
+		<section className="section">
+			{!completed ? (
 				<CompletedMessage setCompleted={setCompleted} />
 			) : (
-				<div id="contact-us">
+				<div className="xl-container flex flex-col items-center gap-8">
 					<h3 className="section-title">Contact Us</h3>
-					<h6 className="text-center text-xl">
+					<h6 className="section-subtitle">
 						Reach out with any questions comments or concerns.
 					</h6>
 					<Survey model={survey} />
 				</div>
 			)}
-		</div>
+		</section>
 	)
 }

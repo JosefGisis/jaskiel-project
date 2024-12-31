@@ -26,11 +26,13 @@ export default function Footer() {
 	]
 
 	return (
-		<div id="footer" className="bg-black text-white w-full">
-			<div className="lg-container">
+		<div id="footer" className="bg-black text-white w-screen">
+			<div className="xl-container">
 				{/* responsive flex is not currently used */}
 				<div className="flex gap-10 xs:flex-col justify-between mt-14">
-					<div id="business-links" className="flex flex-col gap-10">
+					<div
+						id="business-links"
+						className="flex flex-col md:flex-row md:justify-between w-full gap-10">
 						{/* logo and home page links */}
 						<div className="flex flex-col gap-8">
 							{/* logos */}
