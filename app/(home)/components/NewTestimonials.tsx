@@ -2,12 +2,12 @@ import Link from "next/link"
 
 export default function NewTestimonials() {
 	const TestimonialHeader = (
-		<h3 className="section-title">What Our Clients Say</h3>
+		<h3 className="section-title !text-black">What Our Clients Say</h3>
 	)
 
 	const TestimonialSubheader = (
 		<div className="px-20">
-			<h4 className="section-subtitle">
+			<h4 className="section-subtitle !text-black">
 				Our clients are our biggest supporters. Check out our{" "}
 				<Link
 					href="https://www.zillow.com/profile/bjaskiel"

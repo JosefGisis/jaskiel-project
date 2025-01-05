@@ -1,15 +1,25 @@
 "use client"
 
+import { Dispatch, SetStateAction } from "react"
 import { toggleTheme } from "../utils"
 
-export default function ThemeToggle() {
+export default function ThemeToggle({
+	darkMode,
+	setDarkMode,
+}: {
+	darkMode: boolean
+	setDarkMode: Dispatch<SetStateAction<boolean>>
+}) {
 	return (
 		<>
 			<label className="swap swap-rotate pt-1 transition-transform duration-1000 ease-in-out">
 				<input
 					type="checkbox"
 					className="theme-controller"
-					onClick={toggleTheme}
+					onClick={() => {
+						setDarkMode(!darkMode)
+						toggleTheme()
+					}}
 				/>
 				<svg
 					className="swap-on fill-current w-8 h-8"

@@ -11,7 +11,7 @@ export default function WelcomeHero() {
 				backgroundPosition: "center",
 				backgroundAttachment: "fixed",
 			}}
-			className="w-full h-[600px] lg:h-[800px]">
+			className="w-full h-[600px] lg:h-[800px] text-accent">
 			{/* gradient overlay */}
 			<div className="w-full h-full bg-gradient-to-r from-base-100 to-transparent">
 				{/* content container */}

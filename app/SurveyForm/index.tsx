@@ -31,13 +31,13 @@ export default function SurveyForm() {
 	})
 
 	return (
-		<section className="section">
-			{!completed ? (
+		<section className="section bg-white">
+			{completed ? (
 				<CompletedMessage setCompleted={setCompleted} />
 			) : (
 				<div className="xl-container flex flex-col items-center gap-8">
-					<h3 className="section-title">Contact Us</h3>
-					<h6 className="section-subtitle">
+					<h3 className="section-title !text-black">Contact Us</h3>
+					<h6 className="section-subtitle !text-black">
 						Reach out with any questions comments or concerns.
 					</h6>
 					<Survey model={survey} />

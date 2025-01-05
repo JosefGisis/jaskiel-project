@@ -23,7 +23,10 @@ export default function NewAboutSection() {
 					<div className="flex flex-col lg:flex-row justify-between items-start">
 						{about.map(({ image, text, title }, index) => (
 							<div className="flex basis-1/3 lg:flex-col items-center gap-4 p-4">
-								<img src={image} className="h-[100px]" />
+								<img
+									src={image}
+									className="mask mask-parallelogram p-16 bg-secondary"
+								/>
 								<div className="flex flex-col gap-4 items-center justify-center">
 									<h4 className="text-3xl">{title}</h4>
 									<p>{text} </p>
@@ -47,13 +50,13 @@ export const about: AboutType[] = [
 		title: "Experience",
 		text: `
 			The Jaskiel Team has over 12 years experience in the real estate industry, providing clients with expert guidance and support throughout the buying and selling process.`,
-		image: "images/ranking-svgrepo-com.png",
+		image: "images/house_8857910.png",
 	},
 	{
 		title: "Commitment",
 		text: `
 			We are committed to providing our clients with the highest level of service and professionalism. The Jaskiel Team ensures that no matter what your real estate needs may be, you always come out the winner.`,
-		image: "images/trophy-svgrepo-com.png",
+		image: "images/real-estate_602277.png",
 	},
 	{
 		title: "Communication",
@@ -61,6 +64,6 @@ export const about: AboutType[] = [
  			We understand the importance of being accessible and responsive to our clients' needs, which is why we strive to 
 			maintain open lines of communication throughout your real estate journey.		
 		`,
-		image: "images/customer-service-svgrepo-com.png",
+		image: "images/real-estate-agent_3456999.png",
 	},
 ]
