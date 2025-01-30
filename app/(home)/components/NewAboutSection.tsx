@@ -1,4 +1,10 @@
 export default function NewAboutSection() {
+	const masks = [
+		"mask-parallelogram",
+		"mask-parallelogram-3",
+		"mask-parallelogram-2",
+	]
+
 	return (
 		<section id="about-section" className="section">
 			<div className="xl-container flex flex-col items-center gap-8">
@@ -25,7 +31,7 @@ export default function NewAboutSection() {
 							<div className="flex basis-1/3 lg:flex-col items-center gap-4 p-4">
 								<img
 									src={image}
-									className="mask mask-parallelogram p-16 bg-secondary"
+									className={`mask ${masks[index]} p-16 bg-secondary`}
 								/>
 								<div className="flex flex-col gap-4 items-center justify-center">
 									<h4 className="text-3xl">{title}</h4>
