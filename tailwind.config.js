@@ -12,16 +12,16 @@ module.exports = {
 	daisyui: {
 		themes: [
 			{
-				day: {
+				night: {
 					primary: PRIMARY_COLOR,
 
 					secondary: SECONDARY_COLOR,
 
-					accent: "#000000",
+					accent: "#ffffff",
 
 					neutral: NEUTRAL_COLOR,
 
-					"base-100": "#ffffff",
+					"base-100": "#000000",
 
 					info: INFO_COLOR,
 
@@ -33,16 +33,16 @@ module.exports = {
 				},
 			},
 			{
-				night: {
+				day: {
 					primary: PRIMARY_COLOR,
 
 					secondary: SECONDARY_COLOR,
 
-					accent: "#ffffff",
+					accent: "#000000",
 
 					neutral: NEUTRAL_COLOR,
 
-					"base-100": "#000000",
+					"base-100": "#ffffff",
 
 					info: INFO_COLOR,
 
