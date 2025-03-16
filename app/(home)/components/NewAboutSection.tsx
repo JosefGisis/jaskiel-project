@@ -1,16 +1,15 @@
 export default function NewAboutSection() {
-	const masks = [
-		"mask-parallelogram",
-		"mask-parallelogram-3",
-		"mask-parallelogram-2",
-	]
+	// Masks determine the shape for the image masks.
+	const masks = ["mask-parallelogram", "mask-parallelogram-2"]
 
 	return (
-		<section id="about-section" className="section">
+		<section id="about-section" className="section text-accent">
 			<div className="xl-container flex flex-col items-center gap-8">
+				{/* initial paragraph */}
 				<div className="flex flex-col items-center gap-5 text-center">
-					<h3 className="section-title">Who Are We?</h3>
-					<p className="max-w-lg">
+					<h3 className="section-title mb-2">Who Are We?</h3>
+
+					<p className="max-w-lg mb-3">
 						We are The Jaskiel Team, your premier real estate agency
 						serving Lakewood, Jackson, Howell, Toms River and the
 						surrounding communities. Founded by the award-winning
@@ -20,22 +19,32 @@ export default function NewAboutSection() {
 					</p>
 				</div>
 
+				{/* key points in about section */}
 				<div className="flex flex-col items-center gap-5">
 					<h3 className="section-title">
-						Why <span className="bg-primary">The Jaskiel Team</span>
+						Why{" "}
+						<span className="section-title-highlight">
+							The Jaskiel Team
+						</span>
 						?
 					</h3>
 
-					<div className="flex flex-col lg:flex-row justify-between items-start">
+					<div className="flex flex-col justify-between items-start gap-8 lg:gap-0 lg:flex-row">
 						{about.map(({ image, text, title }, index) => (
-							<div className="flex basis-1/3 lg:flex-col items-center gap-4 p-4">
+							<div className="flex basis-1/3 flex-col items-center gap-4 p-4">
+								{/* image with mask */}
 								<img
 									src={image}
-									className={`mask ${masks[index]} p-16 bg-secondary`}
+									// the parallelogram mask changes based on the index
+									className={`mask ${index === 0 || index % 2 === 0 ? "mask-parallelogram" : "mask-parallelogram-2"} bg-secondary p-10 h-[175px] lg:h-[200px]`}
 								/>
-								<div className="flex flex-col gap-4 items-center justify-center">
-									<h4 className="text-3xl">{title}</h4>
-									<p>{text} </p>
+
+								{/* text section */}
+								<div className="flex flex-col gap-4 items-center justify-center max-w-xl">
+									<h4 className="text-2xl text-center ">
+										{title}
+									</h4>
+									<p className="text-center">{text} </p>
 								</div>
 							</div>
 						))}

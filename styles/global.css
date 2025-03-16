@@ -34,6 +34,7 @@ a {
 	text-decoration: underline;
 }
 
+/* Containers define a section that expands to a given width and centers itself. */
 .lg-container {
 	@apply w-full max-w-screen-lg px-6 mx-auto;
 }
@@ -41,23 +42,30 @@ a {
 	@apply w-full max-w-screen-xl px-6 mx-auto;
 }
 
+/* Sections define the main components of a page. */
 .section {
 	@apply py-12 w-screen;
 }
 
 .section-title {
-	@apply text-3xl text-accent max-w-xl text-center;
+	@apply text-2xl md:text-3xl text-accent max-w-xl text-center;
+}
+
+/* Applies a primary background color to a span of text within a section title. */
+.section-title-highlight {
+	@apply bg-primary text-black;
 }
 
 .section-subtitle {
-	@apply text-lg text-accent max-w-2xl text-center;
+	@apply md:text-lg text-accent max-w-2xl text-center;
 }
 
-.sd-element {
+/* what the hell was I doing with these? */
+/* .sd-element {
 	border-width: 1px !important;
 	border-color: rgb(232, 232, 232) !important;
-}
+} */
 
-.highlighted {
+/* .highlighted {
 	@apply bg-primary text-black;
-}
+} */

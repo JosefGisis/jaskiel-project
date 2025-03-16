@@ -16,16 +16,16 @@ export default function NewAgentCard({
 	email: { label: string; href: string }
 }) {
 	return (
-		<div className="card max-w-[23rem] w-full shadow-lg border-[1px] border-secondary">
+		<div className="card max-w-[20rem] w-full shadow-lg border-[1px] border-secondary height-contain">
 			{/* agent image */}
-			<figure>
+			<figure className="p-4 bg-black">
 				<img src={url} />
 			</figure>
 
 			{/* agent content */}
-			<div className="card-body">
+			<div className="card-body p-5">
 				{/* agent bio text */}
-				<p className="text-md text-justify">{text}</p>
+				<p className="text-md text-left">{text}</p>
 
 				{/* links */}
 				<div className="flex flex-col gap-3 mt-4">

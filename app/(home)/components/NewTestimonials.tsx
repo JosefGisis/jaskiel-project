@@ -1,6 +1,7 @@
 import Link from "next/link"
 
 export default function NewTestimonials() {
+	// we use the headers and subheaders twice, so we define them here to be reused
 	const TestimonialHeader = (
 		<h3 className="section-title !text-black">What Our Clients Say</h3>
 	)
@@ -18,13 +19,17 @@ export default function NewTestimonials() {
 			</h4>
 		</div>
 	)
+
 	const TestimonyCarousel = (
 		<div className="flex flex-col w-full items-center gap-5">
+			{/* header and subheader for testimonials	 */}
 			<div className="xl-container flex flex-col w-full gap-5 items-center justify-center px-20">
 				{TestimonialHeader}
 				{TestimonialSubheader}
 			</div>
 
+			{/* carousel for testimonials */}
+			{/* we use relative positioning to allow the gradient masks to be positioned correctly */}
 			<div className="h-[25rem] w-screen relative">
 				<div
 					className={`carousel carousel-center rounded-box max-w-full space-x-5 py-4 w-full h-full px-20`}>
@@ -35,9 +40,12 @@ export default function NewTestimonials() {
 							className="carousel-item relative max-w-sm w-full h-full">
 							<div className="card bg-white shadow-lg border-[1px] border-secondary">
 								<div className="card-body h-full flex flex-col gap-5 p-8 text-black">
+									{/* testimonial text */}
 									<p className="text-md text-justify max-h-[80%] overflow-auto">
 										{text}
 									</p>
+
+									{/* signature for the review */}
 									<div className="flex w-full justify-end">
 										<i className="text-lg">- {name}</i>
 									</div>
@@ -47,6 +55,7 @@ export default function NewTestimonials() {
 					))}
 				</div>
 
+				{/* gradient masks on the left and right to create a fading effect */}
 				<div
 					className={`w-20 absolute left-0 top-0 bottom-0 bg-gradient-to-r from-neutral to-transparent`}
 				/>
@@ -57,16 +66,21 @@ export default function NewTestimonials() {
 		</div>
 	)
 
+	// grid is for displaying on larger screens
 	const TestimonyGrid = (
 		<div className="xl-container grid grid-cols-2 grid-auto-columns:minmax(0, 1fr) gap-10 justify-items-center py-2">
+			{/* header is kept along with the rest of the reviews */}
 			<div className="flex flex-col gap-8 items-center justify-center">
 				{TestimonialHeader}
 				{TestimonialSubheader}
 			</div>
+
+			{/* map through the testimonials and display them in a grid */}
+			{/* we use max-w-lg to limit the width of each testimonial */}
 			{testimonials.map(({ name, text }, index) => (
 				<div
 					key={index}
-					className="flex flex-col gap-5 px-2 text-black">
+					className="flex flex-col gap-5 px-2 text-black max-w-lg">
 					<p>"{text}"</p>
 					<div className="w-full flex justify-end">
 						<i className="text-lg mr-6">- {name}</i>
@@ -77,9 +91,15 @@ export default function NewTestimonials() {
 	)
 
 	return (
-		<section id="testimonials-section" className="section">
+		<section
+			id="testimonials-section"
+			className="section bg-neutral text-black">
 			<div className="w-full bg-neutral flex flex-col items-center justify-center py-12">
+				{/* with small screens we will display the carousel, and on larger screens we will display the grid */}
+				{/* carousel */}
 				<div className="md:hidden w-full">{TestimonyCarousel}</div>
+
+				{/* grid */}
 				<div className="hidden md:block w-full">{TestimonyGrid}</div>
 			</div>
 		</section>

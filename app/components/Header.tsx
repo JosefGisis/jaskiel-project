@@ -30,18 +30,10 @@ export default function Header() {
 				<img
 					src={
 						theme === "night"
-							? "logos/jaskiek-gold-logo.svg"
-							: "logos/jaskiel-logo-black.svg"
+							? "logos/jaskiel-header-gold.svg"
+							: "logos/jaskiel-header-image.svg"
 					}
-					className="h-[80px] max-w-[15%]"
-				/>
-				<img
-					src={
-						theme === "night"
-							? "logos/jaskiel-gold-banner.svg"
-							: "/logos/jaskiel-black-banner.svg"
-					}
-					className="h-[40px] max-w-[60%]"
+					className="h-[80px] max-w-[80%]"
 				/>
 			</Link>
 
