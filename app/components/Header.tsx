@@ -28,9 +28,7 @@ function returnTheme(str: string | Theme): Theme {
 }
 
 export default function Header() {
-	const [theme, _setTheme] = useState<Theme>(
-		returnTheme(localStorage.getItem(THEME_LOCAL_STORAGE_KEY) || "")
-	)
+	const [theme, _setTheme] = useState<Theme>("night")
 
 	// Get the theme from local storage and set it in the document when the component mounts
 	useEffect(() => {
