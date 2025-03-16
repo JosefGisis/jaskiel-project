@@ -36,25 +36,23 @@ export default function Footer() {
 						{/* logo and home page links */}
 						<div className="flex flex-col gap-8">
 							{/* logos */}
-							<div className="flex items-center gap-10">
+							<div className="flex flex-col justify-start items-start lg:flex-row lg:items-center gap-6 lg:gap-10">
 								{/* jaskiel team logo */}
-								<div>
-									<Link href="/">
-										<img
-											src="/logos/new-jaskiel-logo3.png"
-											className="h-[150px]"
-										/>
-									</Link>
-								</div>
+								<Link href="/">
+									<img
+										src="/logos/jaskiel-badge.png"
+										className="h-[150px]"
+									/>
+								</Link>
 
-								{/* divider */}
-								<div className="w-[0.5px] h-24 bg-white opacity-70" />
+								{/* divider. Only shows up on wider screens where the logos are side-by-side */}
+								<div className="w-[0.5px] h-24 bg-white opacity-70 hidden lg:visible" />
 
 								{/* keller williams logo */}
 								<a href="https://www.kw.com/">
 									<img
-										src="logos/KWLogo-white-transparent.svg"
-										className="h-[150px]"
+										src="logos/updated-keller-williams.png"
+										className="h-[75px] max-w-[75%]"
 									/>
 								</a>
 							</div>

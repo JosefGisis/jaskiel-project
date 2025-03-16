@@ -18,11 +18,11 @@ export default function WelcomeHero() {
 				<div className="lg-container h-full flex flex-col items-center justify-center md:items-start">
 					{/* this container keeps header on left side of screen */}
 					<div className="max-w-md flex flex-col items-center md:items-start gap-6">
-						<h1 className="text-3xl md:text-4xl font-bold text-center md:text-start">
+						<h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-center md:text-start">
 							{welcome.title}
 						</h1>
 
-						<h6 className="text-lg md:text-xl text-center md:text-start">
+						<h6 className="text-md md:text-lg lg:text-xl text-center md:text-start">
 							{welcome.subtitle}
 						</h6>
 

@@ -1,5 +1,7 @@
 import Link from "next/link"
 
+const CAROUSEL_GUTTERS = "20rem"
+
 export default function NewTestimonials() {
 	// we use the headers and subheaders twice, so we define them here to be reused
 	const TestimonialHeader = (
@@ -7,7 +9,7 @@ export default function NewTestimonials() {
 	)
 
 	const TestimonialSubheader = (
-		<div className="px-20">
+		<div className="px-4">
 			<h4 className="section-subtitle !text-black">
 				Our clients are our biggest supporters. Check out our{" "}
 				<Link
@@ -23,7 +25,8 @@ export default function NewTestimonials() {
 	const TestimonyCarousel = (
 		<div className="flex flex-col w-full items-center gap-5">
 			{/* header and subheader for testimonials	 */}
-			<div className="xl-container flex flex-col w-full gap-5 items-center justify-center px-20">
+			<div
+				className={`xl-container flex flex-col w-full gap-5 items-center justify-center px-4`}>
 				{TestimonialHeader}
 				{TestimonialSubheader}
 			</div>
@@ -32,18 +35,20 @@ export default function NewTestimonials() {
 			{/* we use relative positioning to allow the gradient masks to be positioned correctly */}
 			<div className="h-[25rem] w-screen relative">
 				<div
-					className={`carousel carousel-center rounded-box max-w-full space-x-5 py-4 w-full h-full px-20`}>
+					className={`carousel carousel-center rounded-box max-w-full space-x-5 py-4 w-full h-full px-8`}>
 					{testimonials.map(({ text, name }, index) => (
 						<div
 							key={index}
 							id={`item${index + 1}`}
-							className="carousel-item relative max-w-sm w-full h-full">
+							className="carousel-item relative max-w-sm w-[90%] h-full">
 							<div className="card bg-white shadow-lg border-[1px] border-secondary">
-								<div className="card-body h-full flex flex-col gap-5 p-8 text-black">
+								<div className="card-body h-full flex flex-col gap-5 p-6 text-black">
 									{/* testimonial text */}
-									<p className="text-md text-justify max-h-[80%] overflow-auto">
-										{text}
-									</p>
+									<div className="max-h-[80%] overflow-auto px-2">
+										<p className="text-md text-left">
+											{text}
+										</p>
+									</div>
 
 									{/* signature for the review */}
 									<div className="flex w-full justify-end">
@@ -57,10 +62,10 @@ export default function NewTestimonials() {
 
 				{/* gradient masks on the left and right to create a fading effect */}
 				<div
-					className={`w-20 absolute left-0 top-0 bottom-0 bg-gradient-to-r from-neutral to-transparent`}
+					className={`w-8 absolute left-0 top-0 bottom-0 bg-gradient-to-r from-neutral to-transparent`}
 				/>
 				<div
-					className={`w-20 absolute right-0 top-0 bottom-0 bg-gradient-to-l from-neutral to-transparent`}
+					className={`w-8 absolute right-0 top-0 bottom-0 bg-gradient-to-l from-neutral to-transparent`}
 				/>
 			</div>
 		</div>
@@ -94,7 +99,7 @@ export default function NewTestimonials() {
 		<section
 			id="testimonials-section"
 			className="section bg-neutral text-black">
-			<div className="w-full bg-neutral flex flex-col items-center justify-center py-12">
+			<div className="w-full bg-neutral flex flex-col items-center justify-center py-8">
 				{/* with small screens we will display the carousel, and on larger screens we will display the grid */}
 				{/* carousel */}
 				<div className="md:hidden w-full">{TestimonyCarousel}</div>

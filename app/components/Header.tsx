@@ -54,7 +54,7 @@ export default function Header() {
 							? "logos/jaskiel-header-gold.svg"
 							: "logos/jaskiel-header-image.svg"
 					}
-					className="h-[80px] max-w-[80%]"
+					className="h-[80px] max-w-[95%]"
 				/>
 			</Link>
 
