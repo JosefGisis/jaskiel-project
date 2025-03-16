@@ -1,6 +1,6 @@
 "use client"
 
-import { Theme } from "../utils/theme"
+import type { Theme } from "./Header"
 
 export default function ThemeToggle({
 	theme,
