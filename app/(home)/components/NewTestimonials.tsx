@@ -42,7 +42,7 @@ export default function NewTestimonials() {
 							id={`item${index + 1}`}
 							className="carousel-item relative max-w-sm w-[90%] h-full">
 							<div className="card bg-white shadow-lg border-[1px] border-secondary">
-								<div className="card-body h-full flex flex-col gap-5 p-6 text-black">
+								<div className="card-body h-full flex flex-col justify-between gap-5 p-6 text-black">
 									{/* testimonial text */}
 									<div className="max-h-[80%] overflow-auto px-2">
 										<p className="text-md text-left">

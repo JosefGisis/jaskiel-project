@@ -46,21 +46,20 @@ export default function Footer() {
 								</Link>
 
 								{/* divider. Only shows up on wider screens where the logos are side-by-side */}
-								<div className="w-[0.5px] h-24 bg-white opacity-70 hidden lg:visible" />
+								<div className="w-[0.5px] h-24 bg-white opacity-70 hidden lg:block" />
 
 								{/* keller williams logo */}
 								<a href="https://www.kw.com/">
 									<img
 										src="logos/updated-keller-williams.png"
-										className="h-[75px] max-w-[75%]"
+										className="w-[350px] max-w-[95%]"
 									/>
 								</a>
 							</div>
 
 							{/* subdivision of Keller Williams Realty */}
 							<p className="text-xs mb-6">
-								The Jaskiel Team is a subdivision of Keller
-								Williams Realty
+								Each Keller Williams office is independently owned & operated.
 							</p>
 						</div>
 

@@ -13,24 +13,26 @@ export default function WelcomeHero() {
 			}}
 			className="w-full h-[600px] lg:h-[800px] text-accent">
 			{/* gradient overlay */}
-			<div className="w-full h-full bg-gradient-to-r from-base-100 to-transparent">
-				{/* content container */}
-				<div className="lg-container h-full flex flex-col items-center justify-center md:items-start">
-					{/* this container keeps header on left side of screen */}
-					<div className="max-w-md flex flex-col items-center md:items-start gap-6">
-						<h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-center md:text-start">
-							{welcome.title}
-						</h1>
+			<div className="bg-base-100/55 sm:bg-base-100/40 md:bg-transparent w-full h-full">
+				<div className="w-full h-full bg-gradient-to-r from-base-100 to-transparent">
+					{/* content container */}
+					<div className="lg-container h-full flex flex-col items-center justify-center sm:items-start">
+						{/* this container keeps header on left side of screen */}
+						<div className="max-w-md flex flex-col items-center sm:items-start gap-6">
+							<h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-center sm:text-start">
+								{welcome.title}
+							</h1>
 
-						<h6 className="text-md md:text-lg lg:text-xl text-center md:text-start">
-							{welcome.subtitle}
-						</h6>
+							<h6 className="text-md sm:text-lg md:text-xl text-center sm:text-start">
+								{welcome.subtitle}
+							</h6>
 
-						<Link href="/#contact-us">
-							<button className="btn btn-primary">
-								Contact Us
-							</button>
-						</Link>
+							<Link href="/#contact-us">
+								<button className="btn btn-primary">
+									Contact Us
+								</button>
+							</Link>
+						</div>
 					</div>
 				</div>
 			</div>
