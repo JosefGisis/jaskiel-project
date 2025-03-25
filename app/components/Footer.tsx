@@ -9,6 +9,16 @@ export default function Footer() {
 	const contactLinks: (LinkType & { icon: React.ReactNode })[] = [
 		{ label: "848-223-2295", href: "tel:8482232295", icon: <FiPhone /> },
 		{
+			label: "732-942-5280",
+			href: "tel:7329425280",
+			icon: (
+				<img
+					src="/logos/KellerWilliams_Infor_KW_rev-W.png"
+					className="h-[16px] m-0 p-0"
+				/>
+			),
+		},
+		{
 			label: "bjaskiel@gmail.com",
 			href: "mailto:bjaskiel@gmail.com",
 			icon: <FiMail />,
@@ -58,9 +68,22 @@ export default function Footer() {
 							</div>
 
 							{/* subdivision of Keller Williams Realty */}
-							<p className="text-xs mb-6">
-								Each Keller Williams office is independently owned & operated.
-							</p>
+							<div className="flex gap-4 items-center">
+								<p className="text-xs">
+									Each Keller Williams office is independently
+									owned & operated.
+								</p>
+
+								<img
+									src="/logos/Equal_Housing_Opportunity_White.png"
+									className="h-10"
+								/>
+
+								<img
+									src="/logos/RealtorMLS_Logo_White.png"
+									className="h-10"
+								/>
+							</div>
 						</div>
 
 						<div className="flex flex-col gap-6">
