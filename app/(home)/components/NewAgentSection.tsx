@@ -84,4 +84,17 @@ export const agents: AgentInfoType[] = [
 		},
 		links: [],
 	},
+	{
+		name: "Kelly Harsche",
+		text: `
+		Kelly is an experienced and detail-oriented Real Estate Transactions Coordinator with a strong track record of supporting real estate agents, clients, and brokers through every stage of the property transaction process. She serves as a reliable point of contact for all parties involved, ensuring a smooth and efficient experience
+		`,
+		imageURL: "images/kelly_profile.png",
+		phone: { label: "732-278-6002", href: "tel:7322786002" },
+		email: {
+			label: "kharsche1976@gmail.com",
+			href: "mailto:kharsche1976@gmail.com",
+		},
+		links: [],
+	},
 ]
