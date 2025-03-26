@@ -3,12 +3,7 @@
 import Link from "next/link"
 import ThemeToggle from "./ThemeToggle"
 import { useEffect, useState } from "react"
-// import {
-// 	getThemeFromLocalStorage,
-// 	setThemeInDocument,
-// 	setThemeInLocalStorage,
-// 	Theme,
-// } from "../utils/theme"
+import { FiMoon, FiSun } from "react-icons/fi"
 
 export type Theme = "night" | "day"
 export function isThemeType(str: string): str is Theme {
@@ -46,8 +41,8 @@ export default function Header() {
 	}
 
 	return (
-		<div className="lg-container flex items-center justify-between py-4 md:py-7">
-			<Link href="/" className="flex items-center gap-10">
+		<div className="lg-container flex items-center justify-between py-2 sm:py-5 md:py-7 gap-5">
+			<Link href="/" className="w-full h-full">
 				<img
 					src={
 						theme === "night"
@@ -58,7 +53,15 @@ export default function Header() {
 				/>
 			</Link>
 
-			<ThemeToggle theme={theme} setTheme={setTheme} />
+			<div
+				className="h-8 w-8 max-w-[6%]"
+				onClick={() => setTheme(theme === "day" ? "night" : "day")}>
+				{theme === "day" ? (
+					<FiSun className="h-full w-full" />
+				) : (
+					<FiMoon className="w-full h-full" />
+				)}
+			</div>
 		</div>
 	)
 }

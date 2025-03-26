@@ -1,5 +1,7 @@
 "use client"
 
+// Not used currently
+
 import { useEffect, useState } from "react"
 
 export default function ScrollToTop() {
