@@ -5,11 +5,11 @@ import { Survey } from "survey-react-ui"
 import { ITheme, Model } from "survey-core"
 import { Typography, Container } from "@mui/material"
 import { themeJson, surveyJson } from "./surveyJson"
-import { track } from "@vercel/analytics"
+// import { track } from "@vercel/analytics"
 
-import mailer from "./mailer"
+// import mailer from "./mailer"
 import CompletedMessage from "./CompletedMessage"
-import uploadBlob from "../uploadBlob"
+// import uploadBlob from "../uploadBlob"
 
 export default function SurveyForm() {
 	const [completed, setCompleted] = useState(false)
@@ -22,14 +22,17 @@ export default function SurveyForm() {
 
 	survey.onComplete.add((survey) => {
 		// Survey analytics tracks contact form submissions
-		track("Contact form submitted")
-		mailer(survey.data)
+		// track("Contact form submitted")
+		// mailer(survey.data)
 		setCompleted(true)
+		console.log(
+			"This is a legacy version of this website. The contact form is disabled and does not do anything."
+		)
 	})
 
-	survey.onValueChanged.add((survey, options) => {
-		uploadBlob("public/logos", "Jaskiel-logo-inverted-org.png")
-	})
+	// survey.onValueChanged.add((survey, options) => {
+	// 	uploadBlob("public/logos", "Jaskiel-logo-inverted-org.png")
+	// })
 
 	return (
 		<Container maxWidth="md">
