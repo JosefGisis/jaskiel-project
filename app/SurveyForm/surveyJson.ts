@@ -60,7 +60,7 @@ export const themeJson = {
 	backgroundImageAttachment: "scroll",
 	backgroundImageFit: "cover",
 	cssVariables: {
-		"--sjs-questionpanel-backcolor": "rgba(253, 253, 253, 1)",
+		"--sjs-questionpanel-backcolor": "rgba(252, 252, 252, 1)",
 		"--sjs-corner-radius": "4px",
 		"--sjs-base-unit": "8px",
 		"--sjs-shadow-small": "0px 2px 3px 0px rgba(0, 0, 0, 0.17)",

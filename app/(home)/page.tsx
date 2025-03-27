@@ -1,17 +1,17 @@
-import SurveyForm from "../SurveyForm"
 import WelcomeHero from "./components/WelcomeHero"
-import NewAboutSection from "./components/NewAboutSection"
-import NewAgentsSection from "./components/NewAgentSection"
-import NewTestimonials from "./components/NewTestimonials"
+import AboutSection from "./components/AboutSection"
+import AgentsSection from "./components/AgentSection"
+import Testimonials from "./components/Testimonials"
+import SurveySection from "./components/SurveySection"
 
 export default function Page() {
 	return (
 		<div className="flex flex-col w-full items-center">
 			<WelcomeHero />
-			<NewAboutSection />
-			<NewAgentsSection />
-			<NewTestimonials />
-			<SurveyForm />
+			<AboutSection />
+			<AgentsSection />
+			<Testimonials />
+			<SurveySection />
 		</div>
 	)
 }

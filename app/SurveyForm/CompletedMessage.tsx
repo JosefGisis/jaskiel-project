@@ -1,3 +1,7 @@
+import { FiInbox } from "react-icons/fi"
+import { FiCheckCircle } from "react-icons/fi"
+import { BsSendCheck } from "react-icons/bs"
+
 export default function ({
 	setCompleted,
 }: {
@@ -5,6 +9,8 @@ export default function ({
 }) {
 	return (
 		<div className="xl-container flex flex-col items-center gap-8">
+			<BsSendCheck className="text-6xl text-primary" />
+
 			<div className="p-2">
 				<h4 className="section-title">
 					Thank you for reaching out to us!

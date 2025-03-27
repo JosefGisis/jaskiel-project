@@ -1,31 +1,52 @@
 export default function AboutSection() {
 	return (
-		<section>
-			<div className="flex flex-col items-center">
-				{/* card background color is determined by index */}
-				{about.map((item, index) => (
-					<div
-						key={index}
-						className={`w-full bg-${index + (1 % 2) === 0 ? "black" : index + (1 % 3) === 0 ? "neutral" : "white"} text-${index + (1 % 2) === 0 ? "white" : "black"} p-10`}>
-						{/* depending on screen width the image and text is displayed in different orders */}
-						<div className="max-w-screen-lg flex xs:flex-col md:flex-row justify-between items-center gap-8">
-							<div className="flex flex-col gap-4 items-center justify-center order-2 min-w-[400px] sm:max-w-[550px] md:max-w-[700px]">
-								<div className="w-full">
-									<h4 className="text-4xl font-bold mt-0 text-center">
-										{item?.title}
+		<section id="about-section" className="section text-accent">
+			<div className="xl-container flex flex-col items-center gap-8">
+				{/* initial paragraph */}
+				<div className="flex flex-col items-center gap-5 text-center">
+					<h3 className="section-title mb-2">Who Are We?</h3>
+
+					<p className="max-w-lg mb-3">
+						We are The Jaskiel Team, your premier real estate agency
+						serving Lakewood, Jackson, Howell, Toms River and the
+						surrounding communities. Founded by the award-winning
+						real estate professional Baila Jackson, our team is
+						dedicated to providing exceptional service and expertise
+						in every aspect of the real estate process.
+					</p>
+				</div>
+
+				{/* key points in about section */}
+				<div className="flex flex-col items-center gap-5">
+					<h3 className="section-title">
+						Why{" "}
+						<span className="section-title-highlight">
+							The Jaskiel Team
+						</span>
+						?
+					</h3>
+
+					<div className="flex flex-col justify-between items-start gap-8 lg:gap-0 lg:flex-row">
+						{about.map(({ image, text, title }, index) => (
+							<div className="flex basis-1/3 flex-col items-center gap-4 p-4">
+								{/* image with mask */}
+								<img
+									src={image}
+									// the parallelogram mask changes based on the index
+									className={`mask ${index === 0 || index % 2 === 0 ? "mask-parallelogram" : "mask-parallelogram-2"} bg-secondary p-10 h-[175px] lg:h-[200px]`}
+								/>
+
+								{/* text section */}
+								<div className="flex flex-col gap-4 items-center justify-center max-w-xl">
+									<h4 className="text-2xl text-center ">
+										{title}
 									</h4>
-								</div>
-								<div className="px-4">
-									<p>{item?.text}</p>
+									<p className="text-center">{text} </p>
 								</div>
 							</div>
-							<div
-								className={`xs:order-3 md:order-${index % 2 === 0 ? 3 : 1}`}>
-								<img src={item.image} width="100%" />
-							</div>
-						</div>
+						))}
 					</div>
-				))}
+				</div>
 			</div>
 		</section>
 	)
@@ -38,36 +59,23 @@ interface AboutType {
 }
 export const about: AboutType[] = [
 	{
-		title: "Who We Are",
+		title: "Experience",
 		text: `
-			We are The Jaskiel Team, your premier real estate agency serving Lakewood, Jackson, Howell, Toms River and the surrounding communities.
-			Founded by the award-winning real estate professional Baila Jackson, our team is dedicated to providing exceptional service and expertise
-			in every aspect of the real estate process.
-			Our goal is to ensure that every transaction is smooth, stress-free, and rewarding for our clients.
-			Whether you're looking to buy your first home, sell your current residence, or invest in real estate, The Jaskiel Team is here to guide 
-			you every step of the way.`,
-		image: "images/pexels-pavel-danilyuk-7937225.jpg",
+			The Jaskiel Team has over 12 years experience in the real estate industry, providing clients with expert guidance and support throughout the buying and selling process.`,
+		image: "images/house_8857910.png",
 	},
 	{
-		title: "Commitment to Excellence",
+		title: "Commitment",
 		text: `
-			At The Jaskiel Team, we are proud to set the standard for excellence in real estate sales and client service. 
-			We prioritize responsiveness, ensuring that you receive timely and personalized attention.
-			We believe that ethical conduct is the cornerstone of trust and reliability in the real estate profession.
-			Our unwavering commitment to these ideals enables us to deliver exceptional experiences for our clients and contribute 
-			positively to the real estate industry as a whole.
-		`,
-		image: "images/pexels-karolina-grabowska-5398881.jpg",
+			We are committed to providing our clients with the highest level of service and professionalism. The Jaskiel Team ensures that no matter what your real estate needs may be, you always come out the winner.`,
+		image: "images/real-estate_602277.png",
 	},
 	{
-		title: "Communication and Guidance",
+		title: "Communication",
 		text: `
-			Whether you're a first-time homebuyer, looking to sell your current property, or seeking investment opportunities, our agents are prepared 
-			to assist you at every turn.
- 			Our agents are available to communicate with you at your convenience, whether it's during regular business hours or outside 
-			of them. We understand the importance of being accessible and responsive to our clients' needs, which is why we strive to 
+ 			We understand the importance of being accessible and responsive to our clients' needs, which is why we strive to 
 			maintain open lines of communication throughout your real estate journey.		
 		`,
-		image: "images/pexels-pixabay-261621.jpg",
+		image: "images/real-estate-agent_3456999.png",
 	},
 ]

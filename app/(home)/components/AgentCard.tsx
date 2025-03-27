@@ -1,7 +1,12 @@
+import Link from "next/link"
+
+import { FiPhone, FiMail } from "react-icons/fi"
+
 export default function AgentCard({
 	text,
 	url,
-	name,
+	// We are not using the name for now because the image contains the name
+	// name,
 	phone,
 	email,
 }: {
@@ -11,46 +16,39 @@ export default function AgentCard({
 	phone: { label: string; href: string }
 	email: { label: string; href: string }
 }) {
-	// return (
-	// 	<Card variant="outlined" sx={{ color: "white" }}>
-	// 		<CardMedia
-	// 			height="350px"
-	// 			component="img"
-	// 			image={url}
-	// 			alt={name}
-	// 			width="100%"
-	// 		/>
-	// 		<CardContent
-	// 			sx={{
-	// 				display: "flex",
-	// 				flexDirection: "column",
-	// 				justifyContent: "center",
-	// 				gap: "0.5rem",
-	// 				// backgroundColor: primary,
-	// 			}}>
-	// 			<Typography
-	// 				fontStyle="oblique"
-	// 				textAlign="center"
-	// 				variant="h4"
-	// 				// color={accent}
-	// 			>
-	// 				{name}
-	// 			</Typography>
-	// 			<Typography variant="subtitle1">{text}</Typography>
-	// 			{/* contact links */}
-	// 			<div style={{ display: "flex", gap: 18 }}>
-	// 				<LocalPhoneIcon />
-	// 				<Link href={phone.href} color="#FFFFFF">
-	// 					{phone.label}
-	// 				</Link>
-	// 			</div>
-	// 			<div style={{ display: "flex", gap: 18 }}>
-	// 				<EmailIcon />
-	// 				<Link href={email.href} color="#FFFFFF">
-	// 					{email.label}
-	// 				</Link>
-	// 			</div>
-	// 		</CardContent>
-	// 	</Card>
-	// )
+	return (
+		<div className="card max-w-[20rem] w-full shadow-lg border-[1px] border-secondary height-contain">
+			{/* agent image */}
+			<figure className="p-4 bg-black">
+				<img src={url} />
+			</figure>
+
+			{/* agent content */}
+			<div className="card-body p-5">
+				{/* agent bio text */}
+				<p className="text-md text-left">{text}</p>
+
+				{/* links */}
+				<div className="flex flex-col gap-3 mt-4">
+					{/* phone link */}
+					<div className="gap-5 flex items-center">
+						<FiPhone />
+
+						<Link href={phone.href} className="link link-hover">
+							{phone.label}
+						</Link>
+					</div>
+
+					{/* email link */}
+					<div className="gap-5 flex items-center">
+						<FiMail />
+
+						<Link href={email.href} className="link link-hover">
+							{email.label}
+						</Link>
+					</div>
+				</div>
+			</div>
+		</div>
+	)
 }

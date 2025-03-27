@@ -1,8 +1,8 @@
 import { LinkType } from "../../types"
 
-import NewAgentCard from "./NewAgentCard"
+import NewAgentCard from "./AgentCard"
 
-export default function NewAgentsSection() {
+export default function AgentsSection() {
 	return (
 		<section id="agents-section" className="section text-accent">
 			<div className="xl-container flex flex-col items-center gap-8">
@@ -89,7 +89,7 @@ export const agents: AgentInfoType[] = [
 		text: `
 		Kelly is an experienced and detail-oriented Real Estate Transactions Coordinator with a strong track record of supporting real estate agents, clients, and brokers through every stage of the property transaction process. She serves as a reliable point of contact for all parties involved, ensuring a smooth and efficient experience
 		`,
-		imageURL: "images/kelly_profile.png",
+		imageURL: "images/Kelly Harsche.png",
 		phone: { label: "732-278-6002", href: "tel:7322786002" },
 		email: {
 			label: "kharsche1976@gmail.com",

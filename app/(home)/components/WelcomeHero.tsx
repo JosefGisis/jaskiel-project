@@ -12,8 +12,10 @@ export default function WelcomeHero() {
 				backgroundAttachment: "fixed",
 			}}
 			className="w-full h-[600px] lg:h-[800px] text-accent">
-			{/* gradient overlay */}
+			{/* this is an overlay that places a semi-opaque brackground over the image for when the screen gets really small */}
+			{/* the reason we do this is to make the text more readable */}
 			<div className="bg-base-100/55 sm:bg-base-100/40 md:bg-transparent w-full h-full">
+				{/* gradient overlay */}
 				<div className="w-full h-full bg-gradient-to-r from-base-100 to-transparent">
 					{/* content container */}
 					<div className="lg-container h-full flex flex-col items-center justify-center sm:items-start">

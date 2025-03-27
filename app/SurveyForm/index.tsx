@@ -31,7 +31,7 @@ export default function SurveyForm() {
 	})
 
 	return (
-		<section className="section bg-white">
+		<div className="w-full h-full mt-6">
 			{completed ? (
 				<CompletedMessage setCompleted={setCompleted} />
 			) : (
@@ -43,6 +43,6 @@ export default function SurveyForm() {
 					<Survey model={survey} />
 				</div>
 			)}
-		</section>
+		</div>
 	)
 }
