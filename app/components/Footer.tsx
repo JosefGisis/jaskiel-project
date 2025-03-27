@@ -36,7 +36,7 @@ export default function Footer() {
 	]
 
 	return (
-		<div id="footer" className="bg-black text-white w-screen">
+		<div id="footer" className="bg-black text-white w-full max-w-full">
 			<div className="xl-container">
 				{/* responsive flex is not currently used */}
 				<div className="flex gap-10 xs:flex-col justify-between mt-14">

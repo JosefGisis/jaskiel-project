@@ -98,14 +98,16 @@ export default function NewTestimonials() {
 	return (
 		<section
 			id="testimonials-section"
-			className="section bg-neutral text-black">
-			<div className="w-full bg-neutral flex flex-col items-center justify-center py-8">
+			className="section bg-neutral text-black max-w-full">
+			<div className="max-w-full w-full bg-neutral flex flex-col items-center justify-center py-8">
 				{/* with small screens we will display the carousel, and on larger screens we will display the grid */}
 				{/* carousel */}
 				<div className="md:hidden w-full">{TestimonyCarousel}</div>
 
 				{/* grid */}
-				<div className="hidden md:block w-full">{TestimonyGrid}</div>
+				<div className="hidden md:block w-full max-w-full">
+					{TestimonyGrid}
+				</div>
 			</div>
 		</section>
 	)
