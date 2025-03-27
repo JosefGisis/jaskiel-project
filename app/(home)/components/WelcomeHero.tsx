@@ -11,7 +11,7 @@ export default function WelcomeHero() {
 				backgroundPosition: "center",
 				backgroundAttachment: "fixed",
 			}}
-			className="w-full h-[600px] lg:h-[800px] text-accent">
+			className="w-full h-[500px] lg:h-[600px] text-accent">
 			{/* this is an overlay that places a semi-opaque brackground over the image for when the screen gets really small */}
 			{/* the reason we do this is to make the text more readable */}
 			<div className="bg-base-100/55 sm:bg-base-100/40 md:bg-transparent w-full h-full">
@@ -28,12 +28,12 @@ export default function WelcomeHero() {
 							<h6 className="text-md sm:text-lg md:text-xl text-center sm:text-start">
 								{welcome.subtitle}
 							</h6>
-
+							{/* 
 							<Link href="/#contact-us">
 								<button className="btn btn-primary">
 									Contact Us
 								</button>
-							</Link>
+							</Link> */}
 						</div>
 					</div>
 				</div>
