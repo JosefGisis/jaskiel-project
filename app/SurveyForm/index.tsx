@@ -8,7 +8,7 @@ import { track } from "@vercel/analytics"
 
 import mailer from "./mailer"
 import CompletedMessage from "./CompletedMessage"
-import uploadBlob from "../uploadBlob"
+// import uploadBlob from "../uploadBlob"
 
 export default function SurveyForm() {
 	const [completed, setCompleted] = useState(false)
@@ -26,9 +26,10 @@ export default function SurveyForm() {
 		setCompleted(true)
 	})
 
-	survey.onValueChanged.add((survey, options) => {
-		uploadBlob("public/logos", "Jaskiel-logo-inverted-org.png")
-	})
+	// I think I used this to upload images to Vercel storage
+	// survey.onValueChanged.add((survey, options) => {
+	// 	uploadBlob("public/logos", "Jaskiel-logo-inverted-org.png")
+	// })
 
 	return (
 		<div className="w-full h-full mt-6">

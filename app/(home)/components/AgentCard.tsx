@@ -26,7 +26,7 @@ export default function AgentCard({
 			{/* agent content */}
 			<div className="card-body p-5">
 				{/* agent bio text */}
-				<p className="text-md text-left">{text}</p>
+				<p className="text-md text-left text-sm">{text}</p>
 
 				{/* links */}
 				<div className="flex flex-col gap-3 mt-4">

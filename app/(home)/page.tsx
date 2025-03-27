@@ -11,7 +11,7 @@ export default function Page() {
 			<AboutSection />
 			<AgentsSection />
 			<Testimonials />
-			<SurveySection />
+			{/* <SurveySection /> */}
 		</div>
 	)
 }
