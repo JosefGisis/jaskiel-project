@@ -1,0 +1,14 @@
+☐ Create unified classes for sections, headers, and subtitles
+☐ Test widths on different devices
+☐ Check if widths are matched across sections
+☐ Fix light and dark mode. We should start with dark and then switch to light. The header will also need to use state.
+☐ Get font for website.
+☐ Shrink the icons in the about section.
+☐ Add the admin as an agent.
+☐ Footer images need to be fixed.
+☐ Need to replace the KW logo.
+☐ Hero needs to be fixed for mobile, so the words should appear clearly.
+☐ Add a readme on the site. Maybe.
+☐ Add a favicon.
+☐ Fix the banner.
+☐ Generate QR code for the site.

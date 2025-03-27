@@ -2,9 +2,6 @@ import "../styles/global.css"
 
 import type { Metadata } from "next"
 
-import { ThemeProvider } from "@mui/material/styles"
-import { theme } from "./materialUI"
-
 // Vercel Analytics
 import { Analytics } from "@vercel/analytics/react"
 
@@ -14,6 +11,7 @@ import "survey-core/defaultV2.min.css"
 import Footer from "./components/Footer"
 // Scroll to top button.
 import ScrollToTop from "./components/ScrollToTop"
+import Header from "./components/Header"
 
 export const metadata: Metadata = {
 	title: "The Jaskiel Team",
@@ -53,25 +51,22 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode
 }) {
+
 	return (
 		<html lang="en">
-			<body
-				style={{
-					display: "flex",
-					flexDirection: "column",
-					margin: 0,
-				}}>
+			<body>
 				{/* vercel analytics comp */}
 				<Analytics />
 
-				<ThemeProvider theme={theme}>
-					<ScrollToTop />
-					<main style={{ flex: 1, minHeight: "62vh" }}>
-						{children}
-					</main>
+				{/* <ScrollToTop /> */}
+
+				<div className="flex flex-col justify-between items-center min-h-screen">
+					<Header />
+
+					<main className="flex-1 w-full">{children}</main>
 
 					<Footer />
-				</ThemeProvider>
+				</div>
 			</body>
 		</html>
 	)

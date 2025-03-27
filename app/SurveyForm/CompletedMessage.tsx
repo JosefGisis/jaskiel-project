@@ -1,44 +1,31 @@
-import { Box, Button } from "@mui/material"
-import { Typography } from "@mui/material"
-import { colorTheme } from "../../styles/colorTheme"
+import { FiInbox } from "react-icons/fi"
+import { FiCheckCircle } from "react-icons/fi"
+import { BsSendCheck } from "react-icons/bs"
 
 export default function ({
 	setCompleted,
 }: {
 	setCompleted: (completed: boolean) => void
 }) {
-	const { primary } = colorTheme
 	return (
-		<div>
-			<Box
-				sx={{
-					marginBottom: "1.5rem",
-					padding: "0.5rem",
-				}}>
-				<Typography textAlign="center" variant="h4">
+		<div className="xl-container flex flex-col items-center gap-8">
+			<BsSendCheck className="text-6xl text-primary" />
+
+			<div className="p-2">
+				<h4 className="section-title">
 					Thank you for reaching out to us!
-				</Typography>
-			</Box>
-			<Typography
-				marginBottom="1.5rem"
-				textAlign="center"
-				variant="subtitle1">
+				</h4>
+			</div>
+			<p className="section-subtitle">
 				We have received your message and will get back to you as soon
 				as possible.
-			</Typography>
-			<div
-				style={{
-					marginBottom: "4rem",
-					marginInline: "auto",
-					display: "flex",
-					justifyContent: "center",
-				}}>
-				<Button
+			</p>
+			<div className="flex justify-center mb-16 mx-auto">
+				<button
 					onClick={() => setCompleted(false)}
-					variant="outlined"
-					style={{ color: primary }}>
+					className="btn btn-secondary">
 					Send another message
-				</Button>
+				</button>
 			</div>
 		</div>
 	)
