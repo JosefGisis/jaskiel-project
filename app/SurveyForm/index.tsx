@@ -22,9 +22,6 @@ export default function SurveyForm() {
 		track("Contact form submitted")
 		mailer(survey.data)
 		setCompleted(true)
-		console.log(
-			"This is a legacy version of this website. The contact form is disabled and does not do anything."
-		)
 	})
 
 	return (
