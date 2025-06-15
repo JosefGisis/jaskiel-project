@@ -9,8 +9,6 @@ import { Analytics } from "@vercel/analytics/react"
 import "survey-core/defaultV2.min.css"
 
 import Footer from "./components/Footer"
-// Scroll to top button.
-import ScrollToTop from "./components/ScrollToTop"
 import Header from "./components/Header"
 
 export const metadata: Metadata = {
@@ -55,8 +53,6 @@ export default function RootLayout({
 			<body>
 				{/* vercel analytics comp */}
 				<Analytics />
-
-				{/* <ScrollToTop /> */}
 
 				<div className="flex flex-col justify-between items-center min-h-screen">
 					<Header />
