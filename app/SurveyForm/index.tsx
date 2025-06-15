@@ -4,11 +4,10 @@ import React, { useState } from "react"
 import { Survey } from "survey-react-ui"
 import { ITheme, Model } from "survey-core"
 import { themeJson, surveyJson } from "./surveyJson"
-// import { track } from "@vercel/analytics"
+import { track } from "@vercel/analytics"
 
-// import mailer from "./mailer"
+import mailer from "./mailer"
 import CompletedMessage from "./CompletedMessage"
-// import uploadBlob from "../uploadBlob"
 
 export default function SurveyForm() {
 	const [completed, setCompleted] = useState(false)
@@ -20,20 +19,13 @@ export default function SurveyForm() {
 	survey.showCompletedPage = false
 
 	survey.onComplete.add((survey) => {
-		// Survey analytics tracks contact form submissions
-		// track("Contact form submitted")
-		// mailer(survey.data)
+		track("Contact form submitted")
+		mailer(survey.data)
 		setCompleted(true)
 		console.log(
 			"This is a legacy version of this website. The contact form is disabled and does not do anything."
 		)
 	})
-
-
-	// I think I used this to upload images to Vercel storage
-	// survey.onValueChanged.add((survey, options) => {
-	// 	uploadBlob("public/logos", "Jaskiel-logo-inverted-org.png")
-	// })
 
 	return (
 		<div className="w-full h-full mt-6">
