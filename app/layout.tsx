@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 		"Keller Williams Realty",
 	],
 	robots: "index",
-	icons: ["favicons/Jaskiel-favicon-128.svg"],
+	icons: ["logos/Jaskiel-gold-favicon.svg"],
 }
 
 export default function RootLayout({
@@ -51,7 +51,6 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode
 }) {
-
 	return (
 		<html lang="en">
 			<body>
