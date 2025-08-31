@@ -4,3 +4,4 @@ node_modules/
 jaskiel-content/
 .vercel
 .env.development.local
+.DS_Store
