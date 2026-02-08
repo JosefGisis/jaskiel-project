@@ -40,27 +40,38 @@ export default function Header() {
 	}
 
 	return (
-		<div className="lg-container flex items-center justify-between py-2 sm:py-5 md:py-7 gap-5">
-			<Link href="/" className="w-full h-full">
-				<img
-					src={
-						theme === "night"
-							? "logos/jaskiel-header-gold.svg"
-							: "logos/jaskiel-header-image.svg"
-					}
-					className="h-[80px] max-w-[95%]"
-				/>
-			</Link>
+		<header
+			className="w-full border-b border-accent/10 bg-base-100"
+			role="banner">
+			<div className="lg-container flex items-center justify-between py-4 sm:py-5 md:py-6 gap-5">
+				<Link href="/" className="block">
+					<img
+						src={
+							theme === "night"
+								? "logos/jaskiel-header-gold.svg"
+								: "logos/jaskiel-header-image.svg"
+						}
+						alt="The Jaskiel Team - Home"
+						className="h-[60px] md:h-[72px] max-w-[95%] transition-opacity duration-300 hover:opacity-80"
+					/>
+				</Link>
 
-			<div
-				className="h-8 w-8 max-w-[6%]"
-				onClick={() => setTheme(theme === "day" ? "night" : "day")}>
-				{theme === "day" ? (
-					<FiSun className="h-full w-full" />
-				) : (
-					<FiMoon className="w-full h-full" />
-				)}
+				<button
+					type="button"
+					className="h-9 w-9 min-w-[36px] min-h-[44px] flex items-center justify-center rounded-full border border-accent/15 hover:border-primary/40 hover:text-primary transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+					onClick={() => setTheme(theme === "day" ? "night" : "day")}
+					aria-label={
+						theme === "day"
+							? "Switch to dark theme"
+							: "Switch to light theme"
+					}>
+					{theme === "day" ? (
+						<FiSun className="h-4 w-4" aria-hidden="true" />
+					) : (
+						<FiMoon className="w-4 h-4" aria-hidden="true" />
+					)}
+				</button>
 			</div>
-		</div>
+		</header>
 	)
 }

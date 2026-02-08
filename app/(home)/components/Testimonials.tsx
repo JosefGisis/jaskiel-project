@@ -5,30 +5,33 @@ const CAROUSEL_GUTTERS = "20rem"
 export default function Testimonials() {
 	// we use the headers and subheaders twice, so we define them here to be reused
 	const TestimonialHeader = (
-		<h3 className="section-title !text-black">What Our Clients Say</h3>
+		<h2 className="section-title !text-black">What Our Clients Say</h2>
 	)
 
 	const TestimonialSubheader = (
 		<div className="px-4">
-			<h4 className="section-subtitle !text-black">
+			<p className="section-subtitle !text-black/70">
 				Our clients are our biggest supporters. Check out our{" "}
 				<Link
 					href="https://www.zillow.com/profile/bjaskiel"
-					className="link link-hover font-semibold">
+					className="font-semibold text-primary hover:underline underline-offset-2 transition-colors"
+					target="_blank"
+					rel="noopener noreferrer">
 					Zillow
 				</Link>{" "}
 				page to see a full listing of our testimonials.
-			</h4>
+			</p>
 		</div>
 	)
 
 	// Testimony carousel is for displaying on smaller screens
 	const TestimonyCarousel = (
-		<div className="flex flex-col w-full items-center gap-5">
+		<div className="flex flex-col w-full items-center gap-6">
 			{/* header and subheader for testimonials	 */}
 			<div
 				className={`xl-container flex flex-col w-full gap-5 items-center justify-center px-4`}>
 				{TestimonialHeader}
+				<div className="w-16 h-[2px] bg-primary/60 mx-auto" />
 				{TestimonialSubheader}
 			</div>
 
@@ -42,18 +45,26 @@ export default function Testimonials() {
 							key={index}
 							id={`item${index + 1}`}
 							className="carousel-item relative max-w-sm w-[90%] h-full">
-							<div className="card bg-white shadow-lg border-[1px] border-secondary">
-								<div className="card-body h-full flex flex-col justify-between gap-5 p-6 text-black">
+							<div className="bg-white border border-neutral/40 shadow-sm hover:shadow-md transition-shadow duration-300">
+								<div className="h-full flex flex-col justify-between gap-5 p-7 text-black">
+									{/* Large quote mark */}
+									<div className="text-primary/30 font-serif text-5xl leading-none select-none">
+										&ldquo;
+									</div>
+
 									{/* testimonial text */}
-									<div className="max-h-[80%] overflow-auto px-2">
-										<p className="text-md text-left">
+									<div className="max-h-[70%] overflow-auto">
+										<p className="text-[0.95rem] text-left leading-relaxed text-black/75">
 											{text}
 										</p>
 									</div>
 
 									{/* signature for the review */}
-									<div className="flex w-full justify-end">
-										<i className="text-lg">- {name}</i>
+									<div className="flex w-full justify-end items-center gap-2">
+										<div className="w-6 h-[1px] bg-primary/50" />
+										<span className="font-serif text-base italic text-black/60">
+											{name}
+										</span>
 									</div>
 								</div>
 							</div>
@@ -74,22 +85,33 @@ export default function Testimonials() {
 
 	// grid is for displaying on larger screens
 	const TestimonyGrid = (
-		<div className="xl-container grid grid-cols-2 grid-auto-columns:minmax(0, 1fr) gap-10 justify-items-center py-2">
+		<div className="xl-container grid grid-cols-2 gap-12 justify-items-center py-4">
 			{/* header is kept along with the rest of the reviews */}
-			<div className="flex flex-col gap-8 items-center justify-center">
+			<div className="flex flex-col gap-6 items-center justify-center">
 				{TestimonialHeader}
+				<div className="w-16 h-[2px] bg-primary/60 mx-auto" />
 				{TestimonialSubheader}
 			</div>
 
 			{/* map through the testimonials and display them in a grid */}
-			{/* we use max-w-lg to limit the width of each testimonial */}
 			{testimonials.map(({ name, text }, index) => (
 				<div
 					key={index}
-					className="flex flex-col gap-5 px-2 text-black max-w-lg">
-					<p>"{text}"</p>
-					<div className="w-full flex justify-end">
-						<i className="text-lg mr-6">- {name}</i>
+					className="flex flex-col gap-4 px-4 text-black max-w-lg group">
+					{/* Quote mark */}
+					<div className="text-primary/25 font-serif text-4xl leading-none select-none transition-colors duration-300 group-hover:text-primary/40">
+						&ldquo;
+					</div>
+
+					<p className="text-[0.95rem] leading-relaxed text-black/75">
+						{text}
+					</p>
+
+					<div className="w-full flex justify-end items-center gap-2 mt-1">
+						<div className="w-6 h-[1px] bg-primary/40" />
+						<span className="font-serif italic text-black/55">
+							{name}
+						</span>
 					</div>
 				</div>
 			))}
@@ -100,7 +122,7 @@ export default function Testimonials() {
 		<section
 			id="testimonials-section"
 			className="section bg-neutral text-black max-w-full">
-			<div className="max-w-full w-full bg-neutral flex flex-col items-center justify-center py-8">
+			<div className="max-w-full w-full bg-neutral flex flex-col items-center justify-center py-4">
 				{/* with small screens we will display the carousel, and on larger screens we will display the grid */}
 				{/* carousel */}
 				<div className="md:hidden w-full">{TestimonyCarousel}</div>
