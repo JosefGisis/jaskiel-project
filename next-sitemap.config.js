@@ -5,6 +5,15 @@ module.exports = {
 	generateRobotsTxt: true,
 	paths: ["/"],
 	generateIndexSitemap: false,
+	robotsTxtOptions: {
+		policies: [
+			{
+				userAgent: "*",
+				allow: "/",
+			},
+		],
+		additionalSitemaps: [],
+	},
 	transform: async (_, path) => {
 		switch (path) {
 			case "/": {

@@ -40,7 +40,9 @@ export default function Header() {
 	}
 
 	return (
-		<div className="lg-container flex items-center justify-between py-2 sm:py-5 md:py-7 gap-5">
+		<header
+			className="lg-container flex items-center justify-between py-2 sm:py-5 md:py-7 gap-5"
+			role="banner">
 			<Link href="/" className="w-full h-full">
 				<img
 					src={
@@ -48,19 +50,26 @@ export default function Header() {
 							? "logos/jaskiel-header-gold.svg"
 							: "logos/jaskiel-header-image.svg"
 					}
+					alt="The Jaskiel Team - Home"
 					className="h-[80px] max-w-[95%]"
 				/>
 			</Link>
 
-			<div
-				className="h-8 w-8 max-w-[6%]"
-				onClick={() => setTheme(theme === "day" ? "night" : "day")}>
+			<button
+				type="button"
+				className="h-8 w-8 max-w-[6%] min-w-[32px] min-h-[44px] flex items-center justify-center rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+				onClick={() => setTheme(theme === "day" ? "night" : "day")}
+				aria-label={
+					theme === "day"
+						? "Switch to dark theme"
+						: "Switch to light theme"
+				}>
 				{theme === "day" ? (
-					<FiSun className="h-full w-full" />
+					<FiSun className="h-full w-full" aria-hidden="true" />
 				) : (
-					<FiMoon className="w-full h-full" />
+					<FiMoon className="w-full h-full" aria-hidden="true" />
 				)}
-			</div>
-		</div>
+			</button>
+		</header>
 	)
 }

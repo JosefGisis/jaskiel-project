@@ -4,7 +4,7 @@ export default function AboutSection() {
 			<div className="xl-container flex flex-col items-center gap-8">
 				{/* initial paragraph */}
 				<div className="flex flex-col items-center gap-5 text-center">
-					<h3 className="section-title mb-2">Who Are We?</h3>
+					<h2 className="section-title mb-2">Who Are We?</h2>
 
 					<p className="max-w-lg mb-3">
 						We are The Jaskiel Team, your premier real estate agency
@@ -18,29 +18,32 @@ export default function AboutSection() {
 
 				{/* key points in about section */}
 				<div className="flex flex-col items-center gap-5">
-					<h3 className="section-title">
+					<h2 className="section-title">
 						Why{" "}
 						<span className="section-title-highlight">
 							The Jaskiel Team
 						</span>
 						?
-					</h3>
+					</h2>
 
 					<div className="flex flex-col justify-between items-start gap-8 lg:gap-0 lg:flex-row">
 						{about.map(({ image, text, title }, index) => (
-							<div className="flex basis-1/3 flex-col items-center gap-4 p-4">
+							<div
+								key={title}
+								className="flex basis-1/3 flex-col items-center gap-4 p-4">
 								{/* image with mask */}
 								<img
 									src={image}
+									alt={`${title} - The Jaskiel Team`}
 									// the parallelogram mask changes based on the index
 									className={`mask ${index === 0 || index % 2 === 0 ? "mask-parallelogram" : "mask-parallelogram-2"} bg-secondary p-10 h-[175px] lg:h-[200px]`}
 								/>
 
 								{/* text section */}
 								<div className="flex flex-col gap-4 items-center justify-center max-w-xl">
-									<h4 className="text-2xl text-center ">
+									<h3 className="text-2xl text-center ">
 										{title}
-									</h4>
+									</h3>
 									<p className="text-center">{text} </p>
 								</div>
 							</div>

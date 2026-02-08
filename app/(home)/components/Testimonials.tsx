@@ -5,20 +5,22 @@ const CAROUSEL_GUTTERS = "20rem"
 export default function Testimonials() {
 	// we use the headers and subheaders twice, so we define them here to be reused
 	const TestimonialHeader = (
-		<h3 className="section-title !text-black">What Our Clients Say</h3>
+		<h2 className="section-title !text-black">What Our Clients Say</h2>
 	)
 
 	const TestimonialSubheader = (
 		<div className="px-4">
-			<h4 className="section-subtitle !text-black">
+			<p className="section-subtitle !text-black">
 				Our clients are our biggest supporters. Check out our{" "}
 				<Link
 					href="https://www.zillow.com/profile/bjaskiel"
-					className="link link-hover font-semibold">
+					className="link link-hover font-semibold"
+					target="_blank"
+					rel="noopener noreferrer">
 					Zillow
 				</Link>{" "}
 				page to see a full listing of our testimonials.
-			</h4>
+			</p>
 		</div>
 	)
 

@@ -25,9 +25,9 @@ export default function WelcomeHero() {
 								{welcome.title}
 							</h1>
 
-							<h6 className="text-md sm:text-lg md:text-xl text-center sm:text-start">
+							<p className="text-md sm:text-lg md:text-xl text-center sm:text-start">
 								{welcome.subtitle}
-							</h6>
+							</p>
 							{/* 
 							<Link href="/#contact-us">
 								<button className="btn btn-primary">

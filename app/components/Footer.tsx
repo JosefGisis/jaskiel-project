@@ -14,6 +14,7 @@ export default function Footer() {
 			icon: (
 				<img
 					src="/logos/KellerWilliams_Infor_KW_rev-W.png"
+					alt="Keller Williams office"
 					className="h-[16px] m-0 p-0"
 				/>
 			),
@@ -36,7 +37,10 @@ export default function Footer() {
 	]
 
 	return (
-		<div id="footer" className="bg-black text-white w-full max-w-full">
+		<footer
+			id="footer"
+			className="bg-black text-white w-full max-w-full"
+			role="contentinfo">
 			<div className="xl-container">
 				{/* responsive flex is not currently used */}
 				<div className="flex gap-10 xs:flex-col justify-between mt-14">
@@ -51,17 +55,25 @@ export default function Footer() {
 								<Link href="/">
 									<img
 										src="/logos/jaskiel-badge.png"
+										alt="The Jaskiel Team badge logo"
 										className="h-[150px]"
 									/>
 								</Link>
 
 								{/* divider. Only shows up on wider screens where the logos are side-by-side */}
-								<div className="w-[0.5px] h-24 bg-white opacity-70 hidden lg:block" />
+								<div
+									className="w-[0.5px] h-24 bg-white opacity-70 hidden lg:block"
+									aria-hidden="true"
+								/>
 
 								{/* keller williams logo */}
-								<a href="https://www.kw.com/">
+								<a
+									href="https://www.kw.com/"
+									rel="noopener noreferrer"
+									target="_blank">
 									<img
 										src="logos/updated-keller-williams.png"
+										alt="Keller Williams Realty logo"
 										className="w-[350px] max-w-[95%]"
 									/>
 								</a>
@@ -76,40 +88,51 @@ export default function Footer() {
 
 								<img
 									src="/logos/Equal_Housing_Opportunity_White.png"
+									alt="Equal Housing Opportunity"
 									className="h-10"
 								/>
 
 								<img
 									src="/logos/RealtorMLS_Logo_White.png"
+									alt="Realtor MLS"
 									className="h-10"
 								/>
 							</div>
 						</div>
 
-						<div className="flex flex-col gap-6">
+						<nav
+							className="flex flex-col gap-6"
+							aria-label="Contact information">
 							{contactLinks.map(
 								({ label, href, icon }, index) => (
 									<div
 										key={`${index}-${href}`}
-										className="flex gap-2">
-										{icon}
+										className="flex gap-2 items-center">
+										<span aria-hidden="true">{icon}</span>
 
 										<a
 											className="link link-hover"
-											href={href}>
+											href={href}
+											{...(href.startsWith("http")
+												? {
+														rel: "noopener noreferrer",
+														target: "_blank",
+													}
+												: {})}>
 											{label}
 										</a>
 									</div>
 								)
 							)}
-						</div>
+						</nav>
 					</div>
 				</div>
 
 				<p className="my-14 text-center text-white">
-					©️ 2024 The Jaskiel Team - Jackson, NJ 08527
+					&copy; {new Date().getFullYear()} The Jaskiel Team -
+					Jackson, NJ 08527
 				</p>
 			</div>
-		</div>
+		</footer>
 	)
 }

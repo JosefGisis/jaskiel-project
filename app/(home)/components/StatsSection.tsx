@@ -5,12 +5,12 @@ export default function StatsSection() {
 	return (
 		<section id="stats-section" className="section text-accent my-5">
 			<div className="lg-container flex flex-col items-center gap-8">
-				<h4 className="section-title mb-4">
+				<h2 className="section-title mb-4">
 					<span className="section-title-highlight">
 						The Jaskiel Team's
 					</span>{" "}
 					2024 Achievements
-				</h4>
+				</h2>
 				<div className="flex flex-col lg:flex-row w-full items-start lg:items-center justify-around">
 					{stats.map((stat, index) => (
 						<div

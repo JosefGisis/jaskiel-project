@@ -4,9 +4,8 @@ import { FiPhone, FiMail } from "react-icons/fi"
 
 export default function AgentCard({
 	text,
-	url,
-	// We are not using the name for now because the image contains the name
-	// name,
+	url,	
+	name,
 	phone,
 	email,
 }: {
@@ -20,7 +19,10 @@ export default function AgentCard({
 		<div className="card max-w-[20rem] w-full shadow-lg border-[1px] border-secondary height-contain">
 			{/* agent image */}
 			<figure className="p-4 bg-black">
-				<img src={url} />
+				<img
+					src={url}
+					alt={`${name} - Real Estate Agent at The Jaskiel Team`}
+				/>
 			</figure>
 
 			{/* agent content */}
@@ -32,18 +34,24 @@ export default function AgentCard({
 				<div className="flex flex-col gap-3 mt-4">
 					{/* phone link */}
 					<div className="gap-5 flex items-center">
-						<FiPhone />
+						<FiPhone aria-hidden="true" />
 
-						<Link href={phone.href} className="link link-hover">
+						<Link
+							href={phone.href}
+							className="link link-hover"
+							aria-label={`Call ${name} at ${phone.label}`}>
 							{phone.label}
 						</Link>
 					</div>
 
 					{/* email link */}
 					<div className="gap-5 flex items-center">
-						<FiMail />
+						<FiMail aria-hidden="true" />
 
-						<Link href={email.href} className="link link-hover">
+						<Link
+							href={email.href}
+							className="link link-hover"
+							aria-label={`Email ${name} at ${email.label}`}>
 							{email.label}
 						</Link>
 					</div>

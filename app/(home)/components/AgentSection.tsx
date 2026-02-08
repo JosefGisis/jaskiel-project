@@ -6,10 +6,10 @@ export default function AgentsSection() {
 	return (
 		<section id="agents-section" className="section text-accent">
 			<div className="xl-container flex flex-col items-center gap-8">
-				<h4 className="section-title mb-4">
+				<h2 className="section-title mb-4">
 					Meet the{" "}
 					<span className="section-title-highlight">Team</span>
-				</h4>
+				</h2>
 				<div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-auto-columns:minmax(0, 1fr) gap-y-12 justify-items-center">
 					{agents.map((item, index) => (
 						<NewAgentCard
