@@ -1,6 +1,7 @@
 import "../styles/global.css"
 
 import type { Metadata } from "next"
+import { Playfair_Display, DM_Sans } from "next/font/google"
 
 // Vercel Analytics
 import { Analytics } from "@vercel/analytics/react"
@@ -10,6 +11,18 @@ import "survey-core/defaultV2.min.css"
 
 import Footer from "./components/Footer"
 import Header from "./components/Header"
+
+const playfair = Playfair_Display({
+	subsets: ["latin"],
+	variable: "--font-playfair",
+	display: "swap",
+})
+
+const dmSans = DM_Sans({
+	subsets: ["latin"],
+	variable: "--font-dm-sans",
+	display: "swap",
+})
 
 const siteUrl = "https://www.thejaskielteam.com"
 
@@ -170,8 +183,8 @@ export default function RootLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<html lang="en">
-			<body>
+		<html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
+			<body className="font-sans">
 				<JsonLd />
 				{/* vercel analytics comp */}
 				<Analytics />

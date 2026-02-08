@@ -29,9 +29,10 @@ export default function SurveyForm() {
 			{completed ? (
 				<CompletedMessage setCompleted={setCompleted} />
 			) : (
-				<div className="xl-container flex flex-col items-center gap-8">
+				<div className="xl-container flex flex-col items-center gap-6">
 					<h2 className="section-title !text-black">Contact Us</h2>
-					<p className="section-subtitle !text-black">
+					<div className="w-16 h-[2px] bg-primary/60 mx-auto" />
+					<p className="section-subtitle !text-black/70">
 						Reach out with any questions, comments, or concerns.
 					</p>
 					<Survey model={survey} />

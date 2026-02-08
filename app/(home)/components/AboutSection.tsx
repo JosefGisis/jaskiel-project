@@ -1,12 +1,13 @@
 export default function AboutSection() {
 	return (
 		<section id="about-section" className="section text-accent">
-			<div className="xl-container flex flex-col items-center gap-8">
+			<div className="xl-container flex flex-col items-center gap-12">
 				{/* initial paragraph */}
-				<div className="flex flex-col items-center gap-5 text-center">
-					<h2 className="section-title mb-2">Who Are We?</h2>
+				<div className="flex flex-col items-center gap-6 text-center">
+					<h2 className="section-title">Who Are We?</h2>
+					<div className="section-divider" />
 
-					<p className="max-w-lg mb-3">
+					<p className="max-w-lg text-accent/80 leading-relaxed">
 						We are The Jaskiel Team, your premier real estate agency
 						serving Lakewood, Jackson, Howell, Toms River and the
 						surrounding communities. Founded by the award-winning
@@ -17,7 +18,7 @@ export default function AboutSection() {
 				</div>
 
 				{/* key points in about section */}
-				<div className="flex flex-col items-center gap-5">
+				<div className="flex flex-col items-center gap-8">
 					<h2 className="section-title">
 						Why{" "}
 						<span className="section-title-highlight">
@@ -26,25 +27,30 @@ export default function AboutSection() {
 						?
 					</h2>
 
-					<div className="flex flex-col justify-between items-start gap-8 lg:gap-0 lg:flex-row">
+					<div className="flex flex-col justify-between items-start gap-10 lg:gap-6 lg:flex-row mt-4">
 						{about.map(({ image, text, title }, index) => (
 							<div
 								key={title}
-								className="flex basis-1/3 flex-col items-center gap-4 p-4">
+								className="flex basis-1/3 flex-col items-center gap-5 p-6 group">
 								{/* image with mask */}
-								<img
-									src={image}
-									alt={`${title} - The Jaskiel Team`}
-									// the parallelogram mask changes based on the index
-									className={`mask ${index === 0 || index % 2 === 0 ? "mask-parallelogram" : "mask-parallelogram-2"} bg-secondary p-10 h-[175px] lg:h-[200px]`}
-								/>
+								<div className="relative">
+									<img
+										src={image}
+										alt={`${title} - The Jaskiel Team`}
+										className={`mask ${index === 0 || index % 2 === 0 ? "mask-parallelogram" : "mask-parallelogram-2"} bg-secondary p-10 h-[175px] lg:h-[200px] transition-transform duration-500 group-hover:scale-105`}
+									/>
+									{/* Subtle gold accent line below image */}
+									<div className="w-12 h-[2px] bg-primary/60 mx-auto mt-4 transition-all duration-500 group-hover:w-20 group-hover:bg-primary" />
+								</div>
 
 								{/* text section */}
-								<div className="flex flex-col gap-4 items-center justify-center max-w-xl">
-									<h3 className="text-2xl text-center ">
+								<div className="flex flex-col gap-3 items-center justify-center max-w-xl">
+									<h3 className="font-serif text-2xl text-center tracking-tight">
 										{title}
 									</h3>
-									<p className="text-center">{text} </p>
+									<p className="text-center text-accent/75 leading-relaxed text-[0.95rem]">
+										{text}
+									</p>
 								</div>
 							</div>
 						))}
