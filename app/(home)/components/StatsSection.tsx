@@ -16,7 +16,7 @@ export default function StatsSection() {
 						<span className="section-title-highlight">
 							The Jaskiel Team&apos;s
 						</span>{" "}
-						2024 Achievements
+						2025 Achievements
 					</h2>
 					<div className="section-divider" />
 				</div>
@@ -70,8 +70,8 @@ const stats: {
 }[] = [
 	{
 		title: "Units",
-		label: "The Jaskiel Team sold 84 homes in 2024",
-		value: 84,
+		label: "The Jaskiel Team sold 84 homes in 2025",
+		value: 69,
 		type: "quantity",
 		icon: <LiaHomeSolid size={48} />,
 	},
@@ -84,8 +84,8 @@ const stats: {
 	},
 	{
 		title: "Sales",
-		label: "The Jaskiel Team sold over $59M in real estate in 2024",
-		value: 59293206,
+		label: "The Jaskiel Team sold over $59M in real estate in 2025",
+		value: 47844900,
 		type: "dollars",
 		icon: <LiaMoneyBillWaveSolid size={48} />,
 	},
