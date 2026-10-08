@@ -21,7 +21,9 @@ export default function SurveyForm() {
 		model.showCompletedPage = false
 		model.onComplete.add(async (sender) => {
 			setStatus("sending")
-			const { ok } = await mailer(sender.data).catch(() => ({ ok: false }))
+			const { ok } = await mailer(sender.data).catch(() => ({
+				ok: false,
+			}))
 			if (ok) track("Contact form submitted")
 			setStatus(ok ? "sent" : "failed")
 		})
@@ -44,13 +46,20 @@ export default function SurveyForm() {
 					Reach out with any questions, comments, or concerns.
 				</p>
 
-				{status === "sending" && <p className="section-subtitle !text-black/70">Sending your message…</p>}
+				{status === "sending" && (
+					<p className="section-subtitle !text-black/70">
+						Sending your message…
+					</p>
+				)}
 
 				{status === "failed" && (
 					<div className="flex flex-col items-center gap-4 !text-black">
 						<p className="section-subtitle !text-black">
-							Sorry, we couldn&apos;t send your message. Please try again, or email us at{" "}
-							<a href="mailto:thejaskielteam@gmail.com" className="underline">
+							Sorry, we couldn&apos;t send your message. Please
+							try again, or email us at{" "}
+							<a
+								href="mailto:thejaskielteam@gmail.com"
+								className="underline">
 								thejaskielteam@gmail.com
 							</a>
 							.

@@ -53,12 +53,16 @@ function parseSurveyData(data: unknown): SurveyData | null {
 	const raw = data as Record<string, unknown>
 
 	const email = optionalText(raw.email, MAX_EMAIL_LENGTH + 1)
-	if (email.length > MAX_EMAIL_LENGTH || !EMAIL_PATTERN.test(email)) return null
+	if (email.length > MAX_EMAIL_LENGTH || !EMAIL_PATTERN.test(email))
+		return null
 
 	const request = optionalText(raw.request, MAX_REQUEST_LENGTH)
 	if (!request) return null
 
-	const name = raw.name && typeof raw.name === "object" ? (raw.name as Record<string, unknown>) : {}
+	const name =
+		raw.name && typeof raw.name === "object"
+			? (raw.name as Record<string, unknown>)
+			: {}
 
 	return {
 		email,
@@ -76,14 +80,19 @@ export default async function mailer(data: unknown): Promise<{ ok: boolean }> {
 	if (!survey) return { ok: false }
 
 	const email = escapeHtml(survey.email)
-	const fullName = escapeHtml(`${survey.name?.first ?? ""} ${survey.name?.last ?? ""}`.trim())
+	const fullName = escapeHtml(
+		`${survey.name?.first ?? ""} ${survey.name?.last ?? ""}`.trim()
+	)
 	const phone = survey.phone ? escapeHtml(survey.phone) : ""
 	const request = escapeHtml(survey.request).replace(/\n/g, "<br />")
 
 	try {
 		await transporter.sendMail({
 			from: process.env.GMAIL_USER,
-			to: [process.env.GMAIL_USER || "", process.env.THIRD_PARTY_EMAIL || ""],
+			to: [
+				process.env.GMAIL_USER || "",
+				process.env.THIRD_PARTY_EMAIL || "",
+			],
 			replyTo: survey.email,
 			subject: "Request received",
 			html: `
